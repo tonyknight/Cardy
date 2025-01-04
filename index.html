@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8" />
+     <title>Tailscale Servers Dashboard</title>
+     <style>
+          /* Basic reset and some styling */
+          * {
+               box-sizing: border-box;
+               margin: 0;
+               padding: 0;
+          }
+
+          body {
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+               padding: 32px;
+               background: #f8fafc;
+               color: #1e293b;
+               line-height: 1.5;
+          }
+
+          h1 {
+               margin-bottom: 1.5rem;
+               font-size: 2rem;
+               font-weight: 600;
+               color: #0f172a;
+          }
+
+          /* Container for the entire dashboard */
+          .dashboard {
+               max-width: 1400px;
+               margin: 0 auto;
+          }
+
+          /* Section */
+          .section {
+               background: #ffffff;
+               border-radius: 12px;
+               padding: 1.5rem;
+               margin-bottom: 1.5rem;
+               box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+               border: 1px solid rgba(0, 0, 0, 0.05);
+               transition: all 0.2s ease;
+          }
+
+          .section:hover {
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+          }
+
+          .section-header {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               margin-bottom: 1rem;
+          }
+
+          .section h2 {
+               font-size: 1.25rem;
+               font-weight: 600;
+               color: #0f172a;
+          }
+
+          .remove-section-btn {
+               background: #ef4444;
+               color: #fff;
+               border: none;
+               padding: 0.5rem 1rem;
+               border-radius: 6px;
+               cursor: pointer;
+               font-weight: 500;
+               transition: background 0.2s ease;
+          }
+
+          .remove-section-btn:hover {
+               background: #dc2626;
+          }
+
+          /* Cards container - 5 cards per row using a CSS grid */
+          .cards-container {
+               display: grid;
+               grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+               gap: 1rem;
+          }
+
+          /* Each card */
+          .card {
+               background: #ffffff;
+               border: 1px solid rgba(0, 0, 0, 0.05);
+               border-radius: 8px;
+               padding: 1.25rem;
+               text-align: center;
+               transition: all 0.2s ease;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+          }
+
+          .card:hover {
+               transform: translateY(-2px);
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+          }
+
+          .card img {
+               width: 48px;
+               height: 48px;
+               margin-bottom: 1rem;
+               border-radius: 8px;
+          }
+
+          .card-title {
+               font-weight: 600;
+               margin: 0.5rem 0;
+               color: #0f172a;
+          }
+
+          .card-link {
+               background: #3b82f6;
+               color: #ffffff;
+               text-decoration: none;
+               padding: 0.5rem 1rem;
+               border-radius: 6px;
+               font-weight: 500;
+               margin: 0.75rem 0;
+               transition: background 0.2s ease;
+               width: 100%;
+          }
+
+          .card-link:hover {
+               background: #2563eb;
+               text-decoration: none;
+          }
+
+          .remove-card-btn {
+               background: #ef4444;
+               color: #fff;
+               border: none;
+               padding: 0.4rem 0.8rem;
+               border-radius: 6px;
+               cursor: pointer;
+               font-size: 0.875rem;
+               margin-top: 0.5rem;
+               width: 100%;
+               transition: background 0.2s ease;
+          }
+
+          .remove-card-btn:hover {
+               background: #dc2626;
+          }
+
+          /* Add Section form */
+          #add-section-form {
+               margin-bottom: 2rem;
+               display: flex;
+               gap: 1rem;
+               max-width: 600px;
+          }
+
+          #add-section-form input[type="text"] {
+               flex: 1;
+               padding: 0.75rem 1rem;
+               font-size: 1rem;
+               border: 1px solid #e2e8f0;
+               border-radius: 6px;
+               outline: none;
+               transition: border-color 0.2s ease;
+          }
+
+          #add-section-form input[type="text"]:focus {
+               border-color: #3b82f6;
+               box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+          }
+
+          #add-section-form button {
+               padding: 0.75rem 1.5rem;
+               background: #3b82f6;
+               color: #ffffff;
+               border: none;
+               border-radius: 6px;
+               font-weight: 500;
+               cursor: pointer;
+               transition: background 0.2s ease;
+          }
+
+          #add-section-form button:hover {
+               background: #2563eb;
+          }
+
+          /* Add card form inside each section (hidden by default, toggles on button click) */
+          .add-card-form {
+               margin: 1rem 0;
+               display: none;
+               flex-direction: column;
+               gap: 0.75rem;
+               max-width: 400px;
+          }
+
+          .add-card-form input[type="text"] {
+               padding: 0.75rem 1rem;
+               font-size: 0.875rem;
+               border: 1px solid #e2e8f0;
+               border-radius: 6px;
+               outline: none;
+               transition: border-color 0.2s ease;
+          }
+
+          .add-card-form input[type="text"]:focus {
+               border-color: #3b82f6;
+               box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+          }
+
+          .add-card-form button {
+               padding: 0.75rem 1rem;
+               background: #3b82f6;
+               color: #ffffff;
+               border: none;
+               border-radius: 6px;
+               font-weight: 500;
+               cursor: pointer;
+               transition: background 0.2s ease;
+          }
+
+          .add-card-form button:hover {
+               background: #2563eb;
+          }
+
+          .show-add-card-form-btn {
+               background: #3b82f6;
+               color: #ffffff;
+               border: none;
+               padding: 0.75rem 1rem;
+               border-radius: 6px;
+               cursor: pointer;
+               font-weight: 500;
+               margin-bottom: 1rem;
+               transition: background 0.2s ease;
+          }
+
+          .show-add-card-form-btn:hover {
+               background: #2563eb;
+          }
+
+          .edit-section-btn, .edit-card-btn {
+               background: #0ea5e9;
+               color: #fff;
+               border: none;
+               padding: 0.5rem 1rem;
+               border-radius: 6px;
+               cursor: pointer;
+               font-weight: 500;
+               transition: background 0.2s ease;
+               margin-right: 0.5rem;
+          }
+
+          .edit-section-btn:hover, .edit-card-btn:hover {
+               background: #0284c7;
+          }
+
+          .edit-card-btn {
+               width: 100%;
+               margin: 0.5rem 0;
+          }
+
+          /* Add these styles to your existing CSS */
+          .dropdown {
+               position: relative;
+               display: inline-block;
+          }
+
+          .dropdown-toggle {
+               background: transparent;
+               border: none;
+               color: #64748b;
+               cursor: pointer;
+               padding: 0.5rem;
+               border-radius: 4px;
+          }
+
+          .dropdown-toggle:hover {
+               background: #f1f5f9;
+          }
+
+          .dropdown-toggle svg {
+               width: 16px;
+               height: 16px;
+          }
+
+          .dropdown-menu {
+               position: absolute;
+               right: 0;
+               top: 100%;
+               background: white;
+               border: 1px solid #e2e8f0;
+               border-radius: 6px;
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+               display: none;
+               z-index: 100;
+               min-width: 120px;
+          }
+
+          .dropdown-menu.show {
+               display: block;
+          }
+
+          .dropdown-item {
+               display: block;
+               padding: 0.5rem 1rem;
+               color: #334155;
+               text-decoration: none;
+               cursor: pointer;
+               width: 100%;
+               text-align: left;
+               border: none;
+               background: none;
+               font-size: 0.875rem;
+          }
+
+          .dropdown-item:hover {
+               background: #f8fafc;
+          }
+
+          .dropdown-item.delete {
+               color: #ef4444;
+          }
+
+          /* Remove old button styles */
+          .remove-section-btn, .remove-card-btn, .edit-section-btn, .edit-card-btn {
+               display: none;
+          }
+     </style>
+</head>
+
+<body>
+     <h1>My Tailscale Servers Dashboard</h1>
+
+     <!-- Add New Section Form -->
+     <form id="add-section-form">
+          <input type="text" id="sectionName" placeholder="New Section Name" required />
+          <button type="submit">Add Section</button>
+     </form>
+
+     <!-- Container for the entire dashboard -->
+     <div id="dashboard" class="dashboard"></div>
+
+     <script>
+          // -- Data Structure (Loaded / Saved from localStorage) --
+          // Each "section" is an object with { id, name, cards: [] }
+          // Each "card" is an object with { id, title, link, icon }
+
+          let sections = [];
+
+          // Load from localStorage if available
+          function loadData() {
+               const saved = localStorage.getItem("dashboardSections");
+               if (saved) {
+                    sections = JSON.parse(saved);
+               } else {
+                    sections = [];
+               }
+          }
+
+          function saveData() {
+               localStorage.setItem("dashboardSections", JSON.stringify(sections));
+          }
+
+          // Utility to create unique IDs
+          function generateId() {
+               return "_" + Math.random().toString(36).substr(2, 9);
+          }
+
+          // -- Rendering Functions --
+          function renderDashboard() {
+               const dashboard = document.getElementById("dashboard");
+               dashboard.innerHTML = ""; // Clear existing content
+
+               // Render each section
+               sections.forEach((section) => {
+                    const sectionDiv = document.createElement("div");
+                    sectionDiv.className = "section";
+                    sectionDiv.setAttribute("data-section-id", section.id);
+
+                    // Section header
+                    const sectionHeader = document.createElement("div");
+                    sectionHeader.className = "section-header";
+                    const sectionTitle = document.createElement("h2");
+                    sectionTitle.textContent = section.name;
+
+                    const sectionDropdown = createDropdownMenu([
+                         {
+                              label: 'Add Card',
+                              action: () => {
+                                   const title = prompt("Enter card title:");
+                                   const link = prompt("Enter service link:");
+                                   const icon = prompt("Enter icon URL (optional):");
+                                   
+                                   if (title && title.trim() && link && link.trim()) {
+                                        addCard(section.id, title.trim(), link.trim(), icon ? icon.trim() : '');
+                                   }
+                              }
+                         },
+                         {
+                              label: 'Edit Section',
+                              action: () => {
+                                   const newName = prompt("Enter new section name:", section.name);
+                                   if (newName && newName.trim()) {
+                                        editSection(section.id, newName.trim());
+                                   }
+                              }
+                         },
+                         {
+                              label: 'Remove Section',
+                              class: 'delete',
+                              action: () => removeSection(section.id)
+                         }
+                    ]);
+
+                    sectionHeader.appendChild(sectionTitle);
+                    sectionHeader.appendChild(sectionDropdown);
+
+                    // Cards container
+                    const cardsContainer = document.createElement("div");
+                    cardsContainer.className = "cards-container";
+
+                    // Render each card
+                    section.cards.forEach((card) => {
+                         const cardDiv = document.createElement("div");
+                         cardDiv.className = "card";
+
+                         // Icon (if provided)
+                         if (card.icon) {
+                              const iconImg = document.createElement("img");
+                              iconImg.src = card.icon;
+                              iconImg.alt = "Icon";
+                              cardDiv.appendChild(iconImg);
+                         }
+
+                         // Title
+                         const titleEl = document.createElement("div");
+                         titleEl.className = "card-title";
+                         titleEl.textContent = card.title;
+                         cardDiv.appendChild(titleEl);
+
+                         // Link
+                         const linkEl = document.createElement("a");
+                         linkEl.className = "card-link";
+                         linkEl.href = card.link;
+                         linkEl.target = "_blank";
+                         linkEl.rel = "noopener noreferrer";
+                         linkEl.textContent = "Open";
+                         cardDiv.appendChild(linkEl);
+
+                         // Edit card button
+                         const cardDropdown = createDropdownMenu([
+                              {
+                                   label: 'Edit',
+                                   action: () => {
+                                        const newTitle = prompt("Enter new title:", card.title);
+                                        const newLink = prompt("Enter new link:", card.link);
+                                        const newIcon = prompt("Enter new icon URL:", card.icon);
+                                        
+                                        if (newTitle && newTitle.trim()) {
+                                             editCard(section.id, card.id, {
+                                                  title: newTitle.trim(),
+                                                  link: newLink ? newLink.trim() : card.link,
+                                                  icon: newIcon ? newIcon.trim() : card.icon
+                                             });
+                                        }
+                                   }
+                              },
+                              {
+                                   label: 'Remove',
+                                   class: 'delete',
+                                   action: () => removeCard(section.id, card.id)
+                              }
+                         ]);
+
+                         // Add the dropdown to the card (add this after the link element)
+                         cardDiv.appendChild(cardDropdown);
+
+                         cardsContainer.appendChild(cardDiv);
+                    });
+
+                    // Append everything
+                    sectionDiv.appendChild(sectionHeader);
+                    sectionDiv.appendChild(cardsContainer);
+
+                    dashboard.appendChild(sectionDiv);
+               });
+          }
+
+          // -- CRUD Operations for Sections --
+          function addSection(name) {
+               const newSection = {
+                    id: generateId(),
+                    name,
+                    cards: [],
+               };
+               sections.push(newSection);
+               saveData();
+               renderDashboard();
+          }
+
+          function removeSection(sectionId) {
+               sections = sections.filter((sec) => sec.id !== sectionId);
+               saveData();
+               renderDashboard();
+          }
+
+          // -- CRUD Operations for Cards --
+          function addCard(sectionId, title, link, icon) {
+               // Find the section
+               const section = sections.find((s) => s.id === sectionId);
+               if (!section) return;
+
+               const newCard = {
+                    id: generateId(),
+                    title,
+                    link,
+                    icon,
+               };
+
+               section.cards.push(newCard);
+               saveData();
+               renderDashboard();
+          }
+
+          function removeCard(sectionId, cardId) {
+               // Find the section
+               const section = sections.find((s) => s.id === sectionId);
+               if (!section) return;
+               section.cards = section.cards.filter((c) => c.id !== cardId);
+               saveData();
+               renderDashboard();
+          }
+
+          // -- Initialization --
+          loadData();
+          renderDashboard();
+
+          // -- Handle Add Section Form --
+          const addSectionForm = document.getElementById("add-section-form");
+          const sectionNameInput = document.getElementById("sectionName");
+
+          addSectionForm.addEventListener("submit", (e) => {
+               e.preventDefault();
+               const sectionName = sectionNameInput.value.trim();
+               if (sectionName) {
+                    addSection(sectionName);
+                    sectionNameInput.value = "";
+               }
+          });
+
+          // Add these new functions for editing
+          function editSection(sectionId, newName) {
+               const section = sections.find(s => s.id === sectionId);
+               if (section) {
+                    section.name = newName;
+                    saveData();
+                    renderDashboard();
+               }
+          }
+
+          function editCard(sectionId, cardId, updates) {
+               const section = sections.find(s => s.id === sectionId);
+               if (section) {
+                    const card = section.cards.find(c => c.id === cardId);
+                    if (card) {
+                         Object.assign(card, updates);
+                         saveData();
+                         renderDashboard();
+                    }
+               }
+          }
+
+          // Add this function after your existing JavaScript
+          function createDropdownMenu(items) {
+               const dropdown = document.createElement('div');
+               dropdown.className = 'dropdown';
+
+               const toggleButton = document.createElement('button');
+               toggleButton.className = 'dropdown-toggle';
+               toggleButton.innerHTML = `
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                    </svg>
+               `;
+
+               const menu = document.createElement('div');
+               menu.className = 'dropdown-menu';
+
+               items.forEach(item => {
+                    const button = document.createElement('button');
+                    button.className = `dropdown-item ${item.class || ''}`;
+                    button.textContent = item.label;
+                    button.onclick = item.action;
+                    menu.appendChild(button);
+               });
+
+               toggleButton.onclick = (e) => {
+                    e.stopPropagation();
+                    menu.classList.toggle('show');
+               };
+
+               // Close dropdown when clicking outside
+               document.addEventListener('click', () => {
+                    menu.classList.remove('show');
+               });
+
+               dropdown.appendChild(toggleButton);
+               dropdown.appendChild(menu);
+               return dropdown;
+          }
+     </script>
+</body>
+
+</html>
