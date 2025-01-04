@@ -191,38 +191,75 @@
           .add-card-form {
                margin: 1rem 0;
                display: none;
-               flex-direction: column;
-               gap: 0.75rem;
-               max-width: 400px;
           }
 
-          .add-card-form input[type="text"] {
-               padding: 0.75rem 1rem;
-               font-size: 0.875rem;
+          .new-card {
+               background: #ffffff;
+               border: 1px solid rgba(0, 0, 0, 0.1);
+               border-radius: 8px;
+               padding: 1.25rem;
+               max-width: 400px;
+               margin: 0 auto;
+          }
+
+          .card-input {
+               width: 100%;
+               padding: 0.75rem;
+               margin-bottom: 1rem;
                border: 1px solid #e2e8f0;
                border-radius: 6px;
-               outline: none;
-               transition: border-color 0.2s ease;
+               font-size: 0.875rem;
           }
 
-          .add-card-form input[type="text"]:focus {
+          .card-input:focus {
+               outline: none;
                border-color: #3b82f6;
                box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
           }
 
-          .add-card-form button {
+          .icon-selector {
+               margin-bottom: 1rem;
+          }
+
+          .icon-preview {
+               height: 48px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               margin-top: 0.5rem;
+          }
+
+          .form-buttons {
+               display: flex;
+               gap: 0.5rem;
+          }
+
+          .submit-card-btn, .cancel-card-btn {
                padding: 0.75rem 1rem;
-               background: #3b82f6;
-               color: #ffffff;
-               border: none;
                border-radius: 6px;
                font-weight: 500;
                cursor: pointer;
-               transition: background 0.2s ease;
+               flex: 1;
           }
 
-          .add-card-form button:hover {
+          .submit-card-btn {
+               background: #3b82f6;
+               color: #ffffff;
+               border: none;
+          }
+
+          .cancel-card-btn {
+               background: #f1f5f9;
+               color: #64748b;
+               border: 1px solid #e2e8f0;
+          }
+
+          .submit-card-btn:hover {
                background: #2563eb;
+          }
+
+          .cancel-card-btn:hover {
+               background: #e2e8f0;
           }
 
           .show-add-card-form-btn {
@@ -328,290 +365,546 @@
           .remove-section-btn, .remove-card-btn, .edit-section-btn, .edit-card-btn {
                display: none;
           }
+
+          /* Add to your existing styles */
+          .header-container {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               gap: 1.5rem;
+               margin-bottom: 2rem;
+               text-align: center;
+          }
+
+          .save-dashboard-btn {
+               background: #3b82f6;
+               color: #ffffff;
+               border: none;
+               padding: 0.75rem 1.5rem;
+               border-radius: 6px;
+               font-weight: 500;
+               cursor: pointer;
+               transition: background 0.2s ease;
+               margin-top: 20px;
+          }
+
+          .save-dashboard-btn:hover {
+               background: #2563eb;
+          }
+
+          /* Add to your existing styles */
+          .welcome-screen {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               justify-content: center;
+               min-height: 80vh;
+               text-align: center;
+          }
+
+          .welcome-screen h1 {
+               font-size: 2.5rem;
+               color: #0f172a;
+               margin-bottom: 1rem;
+          }
+
+          .welcome-screen p {
+               color: #64748b;
+               margin-bottom: 2rem;
+          }
+
+          .create-dashboard-btn {
+               background: #3b82f6;
+               color: white;
+               border: none;
+               width: 48px;
+               height: 48px;
+               border-radius: 24px;
+               cursor: pointer;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               transition: transform 0.2s ease, background-color 0.2s ease;
+          }
+
+          .create-dashboard-btn:hover {
+               background: #2563eb;
+               transform: scale(1.1);
+          }
+
+          .dashboard-container {
+               max-width: 1400px;
+               margin: 0 auto;
+               padding: 32px;
+          }
+
+          /* Update the dashboard title style */
+          #dashboard-title {
+               margin: 0;
+               font-size: 2rem;
+               color: #0f172a;
+               font-weight: 600;
+          }
      </style>
+     <script type="application/json" id="dashboard-data">
+          {
+               "title": "",
+               "sections": []
+          }
+     </script>
 </head>
 
 <body>
-     <h1>My Tailscale Servers Dashboard</h1>
+    <div id="welcome-screen" class="welcome-screen">
+        <h1>Welcome to Cardy</h1>
+        <p>Click the plus button to name your dashboard</p>
+        <button id="create-dashboard-btn" class="create-dashboard-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+        </button>
+    </div>
 
-     <!-- Add New Section Form -->
-     <form id="add-section-form">
-          <input type="text" id="sectionName" placeholder="New Section Name" required />
-          <button type="submit">Add Section</button>
-     </form>
+    <div id="dashboard-container" class="dashboard-container" style="display: none;">
+        <div class="header-container">
+            <h1 id="dashboard-title"></h1>
+        </div>
+        
+        <form id="add-section-form" style="display: none;">
+            <input type="text" id="sectionName" placeholder="New Section Name" required />
+            <button type="submit">Add Section</button>
+        </form>
 
-     <!-- Container for the entire dashboard -->
-     <div id="dashboard" class="dashboard"></div>
+        <div id="dashboard" class="dashboard"></div>
+    </div>
 
-     <script>
-          // -- Data Structure (Loaded / Saved from localStorage) --
-          // Each "section" is an object with { id, name, cards: [] }
-          // Each "card" is an object with { id, title, link, icon }
+    <script>
+        // Data structure for sections
+        let sections = [];
 
-          let sections = [];
+        // Utility to create unique IDs
+        function generateId() {
+            return "_" + Math.random().toString(36).substr(2, 9);
+        }
 
-          // Load from localStorage if available
-          function loadData() {
-               const saved = localStorage.getItem("dashboardSections");
-               if (saved) {
-                    sections = JSON.parse(saved);
-               } else {
-                    sections = [];
-               }
-          }
+        // Load data function
+        function loadData() {
+            try {
+                // First try to load from embedded JSON
+                const dataScript = document.getElementById('dashboard-data');
+                const embeddedData = JSON.parse(dataScript.textContent);
+                if (embeddedData.sections.length > 0 || embeddedData.title) {
+                    sections = embeddedData.sections;
+                    document.getElementById('welcome-screen').style.display = 'none';
+                    document.getElementById('dashboard-container').style.display = 'block';
+                    document.getElementById('dashboard-title').textContent = embeddedData.title;
+                    document.getElementById('add-section-form').style.display = 'flex';
+                    setupAddSectionForm();
+                    return true;
+                }
 
-          function saveData() {
-               localStorage.setItem("dashboardSections", JSON.stringify(sections));
-          }
-
-          // Utility to create unique IDs
-          function generateId() {
-               return "_" + Math.random().toString(36).substr(2, 9);
-          }
-
-          // -- Rendering Functions --
-          function renderDashboard() {
-               const dashboard = document.getElementById("dashboard");
-               dashboard.innerHTML = ""; // Clear existing content
-
-               // Render each section
-               sections.forEach((section) => {
-                    const sectionDiv = document.createElement("div");
-                    sectionDiv.className = "section";
-                    sectionDiv.setAttribute("data-section-id", section.id);
-
-                    // Section header
-                    const sectionHeader = document.createElement("div");
-                    sectionHeader.className = "section-header";
-                    const sectionTitle = document.createElement("h2");
-                    sectionTitle.textContent = section.name;
-
-                    const sectionDropdown = createDropdownMenu([
-                         {
-                              label: 'Add Card',
-                              action: () => {
-                                   const title = prompt("Enter card title:");
-                                   const link = prompt("Enter service link:");
-                                   const icon = prompt("Enter icon URL (optional):");
-                                   
-                                   if (title && title.trim() && link && link.trim()) {
-                                        addCard(section.id, title.trim(), link.trim(), icon ? icon.trim() : '');
-                                   }
-                              }
-                         },
-                         {
-                              label: 'Edit Section',
-                              action: () => {
-                                   const newName = prompt("Enter new section name:", section.name);
-                                   if (newName && newName.trim()) {
-                                        editSection(section.id, newName.trim());
-                                   }
-                              }
-                         },
-                         {
-                              label: 'Remove Section',
-                              class: 'delete',
-                              action: () => removeSection(section.id)
-                         }
-                    ]);
-
-                    sectionHeader.appendChild(sectionTitle);
-                    sectionHeader.appendChild(sectionDropdown);
-
-                    // Cards container
-                    const cardsContainer = document.createElement("div");
-                    cardsContainer.className = "cards-container";
-
-                    // Render each card
-                    section.cards.forEach((card) => {
-                         const cardDiv = document.createElement("div");
-                         cardDiv.className = "card";
-
-                         // Icon (if provided)
-                         if (card.icon) {
-                              const iconImg = document.createElement("img");
-                              iconImg.src = card.icon;
-                              iconImg.alt = "Icon";
-                              cardDiv.appendChild(iconImg);
-                         }
-
-                         // Title
-                         const titleEl = document.createElement("div");
-                         titleEl.className = "card-title";
-                         titleEl.textContent = card.title;
-                         cardDiv.appendChild(titleEl);
-
-                         // Link
-                         const linkEl = document.createElement("a");
-                         linkEl.className = "card-link";
-                         linkEl.href = card.link;
-                         linkEl.target = "_blank";
-                         linkEl.rel = "noopener noreferrer";
-                         linkEl.textContent = "Open";
-                         cardDiv.appendChild(linkEl);
-
-                         // Edit card button
-                         const cardDropdown = createDropdownMenu([
-                              {
-                                   label: 'Edit',
-                                   action: () => {
-                                        const newTitle = prompt("Enter new title:", card.title);
-                                        const newLink = prompt("Enter new link:", card.link);
-                                        const newIcon = prompt("Enter new icon URL:", card.icon);
-                                        
-                                        if (newTitle && newTitle.trim()) {
-                                             editCard(section.id, card.id, {
-                                                  title: newTitle.trim(),
-                                                  link: newLink ? newLink.trim() : card.link,
-                                                  icon: newIcon ? newIcon.trim() : card.icon
-                                             });
-                                        }
-                                   }
-                              },
-                              {
-                                   label: 'Remove',
-                                   class: 'delete',
-                                   action: () => removeCard(section.id, card.id)
-                              }
-                         ]);
-
-                         // Add the dropdown to the card (add this after the link element)
-                         cardDiv.appendChild(cardDropdown);
-
-                         cardsContainer.appendChild(cardDiv);
+                // If embedded data is empty, try loading from cardy.json
+                fetch('cardy.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        sections = data.sections;
+                        if (sections.length > 0 || data.title) {
+                            document.getElementById('welcome-screen').style.display = 'none';
+                            document.getElementById('dashboard-container').style.display = 'block';
+                            document.getElementById('dashboard-title').textContent = data.title;
+                            document.getElementById('add-section-form').style.display = 'flex';
+                            setupAddSectionForm();
+                            renderDashboard();
+                        }
+                    })
+                    .catch(() => {
+                        // If neither source has data, we're in template mode
+                        sections = [];
                     });
+            } catch (e) {
+                sections = [];
+            }
+            return false;
+        }
 
-                    // Append everything
-                    sectionDiv.appendChild(sectionHeader);
-                    sectionDiv.appendChild(cardsContainer);
+        // Save data function
+        function saveData() {
+            const data = {
+                title: document.getElementById('dashboard-title').textContent,
+                sections: sections
+            };
+            
+            // Update the embedded JSON
+            const dataScript = document.getElementById('dashboard-data');
+            dataScript.textContent = JSON.stringify(data, null, 2);
+            
+            // Save to cardy.json
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'cardy.json';
+            a.click();
+            window.URL.revokeObjectURL(url);
+        }
 
-                    dashboard.appendChild(sectionDiv);
-               });
-          }
+        // Add save button function
+        function addSaveButton() {
+            const saveButton = document.createElement('button');
+            saveButton.textContent = 'Save Dashboard';
+            saveButton.className = 'save-dashboard-btn';
+            saveButton.onclick = saveData;
+            
+            const headerContainer = document.querySelector('.header-container');
+            headerContainer.appendChild(saveButton);
+        }
 
-          // -- CRUD Operations for Sections --
-          function addSection(name) {
-               const newSection = {
-                    id: generateId(),
-                    name,
-                    cards: [],
-               };
-               sections.push(newSection);
-               saveData();
-               renderDashboard();
-          }
+        // Make header editable function
+        function makeHeaderEditable() {
+            const header = document.getElementById('dashboard-title');
+            header.style.cursor = 'pointer';
+            header.onclick = () => {
+                const newTitle = prompt('Enter new dashboard title:', header.textContent);
+                if (newTitle && newTitle.trim()) {
+                    header.textContent = newTitle.trim();
+                }
+            };
+        }
 
-          function removeSection(sectionId) {
-               sections = sections.filter((sec) => sec.id !== sectionId);
-               saveData();
-               renderDashboard();
-          }
-
-          // -- CRUD Operations for Cards --
-          function addCard(sectionId, title, link, icon) {
-               // Find the section
-               const section = sections.find((s) => s.id === sectionId);
-               if (!section) return;
-
-               const newCard = {
-                    id: generateId(),
-                    title,
-                    link,
-                    icon,
-               };
-
-               section.cards.push(newCard);
-               saveData();
-               renderDashboard();
-          }
-
-          function removeCard(sectionId, cardId) {
-               // Find the section
-               const section = sections.find((s) => s.id === sectionId);
-               if (!section) return;
-               section.cards = section.cards.filter((c) => c.id !== cardId);
-               saveData();
-               renderDashboard();
-          }
-
-          // -- Initialization --
-          loadData();
-          renderDashboard();
-
-          // -- Handle Add Section Form --
-          const addSectionForm = document.getElementById("add-section-form");
-          const sectionNameInput = document.getElementById("sectionName");
-
-          addSectionForm.addEventListener("submit", (e) => {
-               e.preventDefault();
-               const sectionName = sectionNameInput.value.trim();
-               if (sectionName) {
-                    addSection(sectionName);
-                    sectionNameInput.value = "";
-               }
-          });
-
-          // Add these new functions for editing
-          function editSection(sectionId, newName) {
-               const section = sections.find(s => s.id === sectionId);
-               if (section) {
-                    section.name = newName;
-                    saveData();
+        // Initialize dashboard functionality
+        function initializeDashboard() {
+            const welcomeScreen = document.getElementById('welcome-screen');
+            const dashboardContainer = document.getElementById('dashboard-container');
+            const createDashboardBtn = document.getElementById('create-dashboard-btn');
+            const addSectionForm = document.getElementById('add-section-form');
+            
+            createDashboardBtn.addEventListener('click', () => {
+                const title = prompt('Enter your dashboard title:');
+                if (title && title.trim()) {
+                    // Hide welcome screen
+                    welcomeScreen.style.display = 'none';
+                    
+                    // Show and setup dashboard
+                    dashboardContainer.style.display = 'block';
+                    document.getElementById('dashboard-title').textContent = title.trim();
+                    
+                    // Show add section form
+                    addSectionForm.style.display = 'flex';
+                    
+                    // Setup edit button
+                    makeHeaderEditable();
+                    addSaveButton();
+                    setupAddSectionForm();
+                    
+                    // Initialize empty dashboard
+                    sections = [];
                     renderDashboard();
-               }
-          }
+                }
+            });
+        }
 
-          function editCard(sectionId, cardId, updates) {
-               const section = sections.find(s => s.id === sectionId);
-               if (section) {
-                    const card = section.cards.find(c => c.id === cardId);
-                    if (card) {
-                         Object.assign(card, updates);
-                         saveData();
-                         renderDashboard();
+        // Render dashboard function
+        function renderDashboard() {
+            const dashboard = document.getElementById('dashboard');
+            dashboard.innerHTML = '';
+            
+            sections.forEach(section => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'section';
+                sectionDiv.setAttribute('data-section-id', section.id);
+
+                // Create section header
+                const sectionHeader = document.createElement('div');
+                sectionHeader.className = 'section-header';
+                
+                const sectionTitle = document.createElement('h2');
+                sectionTitle.textContent = section.name;
+                
+                const sectionDropdown = createDropdownMenu([
+                    {
+                        label: 'Add Card',
+                        action: () => {
+                            // Show the add card form for this section
+                            const addCardForm = sectionDiv.querySelector('.add-card-form');
+                            addCardForm.style.display = 'flex';
+                        }
+                    },
+                    {
+                        label: 'Edit Section',
+                        action: () => {
+                            const newName = prompt("Enter new section name:", section.name);
+                            if (newName && newName.trim()) {
+                                editSection(section.id, newName.trim());
+                            }
+                        }
+                    },
+                    {
+                        label: 'Remove Section',
+                        class: 'delete',
+                        action: () => removeSection(section.id)
                     }
-               }
-          }
+                ]);
 
-          // Add this function after your existing JavaScript
-          function createDropdownMenu(items) {
-               const dropdown = document.createElement('div');
-               dropdown.className = 'dropdown';
+                sectionHeader.appendChild(sectionTitle);
+                sectionHeader.appendChild(sectionDropdown);
 
-               const toggleButton = document.createElement('button');
-               toggleButton.className = 'dropdown-toggle';
-               toggleButton.innerHTML = `
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
-                    </svg>
-               `;
+                // Create cards container
+                const cardsContainer = document.createElement('div');
+                cardsContainer.className = 'cards-container';
 
-               const menu = document.createElement('div');
-               menu.className = 'dropdown-menu';
+                // Add card form
+                const addCardForm = document.createElement('form');
+                addCardForm.className = 'add-card-form';
+                addCardForm.style.display = 'none';
+                addCardForm.innerHTML = `
+                    <div class="card new-card">
+                        <input type="text" class="card-input" name="title" placeholder="Card Title" required>
+                        <input type="text" class="card-input" name="link" placeholder="Service URL or IP Address" required>
+                        <div class="icon-selector">
+                            <input type="text" class="card-input" name="iconSearch" placeholder="Search for icon...">
+                            <div class="icon-preview"></div>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="submit-card-btn">Add</button>
+                            <button type="button" class="cancel-card-btn">Cancel</button>
+                        </div>
+                    </div>
+                `;
 
-               items.forEach(item => {
-                    const button = document.createElement('button');
-                    button.className = `dropdown-item ${item.class || ''}`;
-                    button.textContent = item.label;
-                    button.onclick = item.action;
-                    menu.appendChild(button);
-               });
+                // Handle form submission
+                addCardForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const formData = new FormData(e.target);
+                    const cardData = {
+                        title: formData.get('title'),
+                        link: formData.get('link'),
+                        icon: '' // We'll add icon selection later
+                    };
 
-               toggleButton.onclick = (e) => {
+                    if (cardData.title && cardData.link) {
+                        addCard(section.id, cardData.title, cardData.link, cardData.icon);
+                        addCardForm.style.display = 'none';
+                        addCardForm.reset();
+                    }
+                });
+
+                // Handle cancel button
+                addCardForm.querySelector('.cancel-card-btn').addEventListener('click', () => {
+                    addCardForm.style.display = 'none';
+                    addCardForm.reset();
+                });
+
+                sectionDiv.appendChild(sectionHeader);
+                sectionDiv.appendChild(addCardForm);
+                sectionDiv.appendChild(cardsContainer);
+                dashboard.appendChild(sectionDiv);
+
+                // Render existing cards
+                if (section.cards && section.cards.length > 0) {
+                    section.cards.forEach(card => {
+                        const cardElement = createCardElement(card, section.id);
+                        cardsContainer.appendChild(cardElement);
+                    });
+                }
+            });
+        }
+
+        // Add these helper functions for section operations
+        function removeSection(sectionId) {
+            sections = sections.filter(section => section.id !== sectionId);
+            renderDashboard();
+        }
+
+        function editSection(sectionId, newName) {
+            const section = sections.find(section => section.id === sectionId);
+            if (section) {
+                section.name = newName;
+                renderDashboard();
+            }
+        }
+
+        // Add the dropdown menu creation function if it's not already there
+        function createDropdownMenu(items) {
+            const dropdown = document.createElement('div');
+            dropdown.className = 'dropdown';
+
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'dropdown-toggle';
+            toggleButton.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+                </svg>
+            `;
+
+            const menu = document.createElement('div');
+            menu.className = 'dropdown-menu';
+
+            items.forEach(item => {
+                const button = document.createElement('button');
+                button.className = `dropdown-item ${item.class || ''}`;
+                button.textContent = item.label;
+                button.onclick = (e) => {
                     e.stopPropagation();
-                    menu.classList.toggle('show');
-               };
-
-               // Close dropdown when clicking outside
-               document.addEventListener('click', () => {
                     menu.classList.remove('show');
-               });
+                    item.action();
+                };
+                menu.appendChild(button);
+            });
 
-               dropdown.appendChild(toggleButton);
-               dropdown.appendChild(menu);
-               return dropdown;
-          }
-     </script>
+            toggleButton.onclick = (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('show');
+            };
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                menu.classList.remove('show');
+            });
+
+            dropdown.appendChild(toggleButton);
+            dropdown.appendChild(menu);
+            return dropdown;
+        }
+
+        // Add this to your script section, before the DOMContentLoaded event listener
+        function setupAddSectionForm() {
+            const addSectionForm = document.getElementById('add-section-form');
+            const sectionNameInput = document.getElementById('sectionName');
+
+            addSectionForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent form submission from refreshing the page
+                
+                const sectionName = sectionNameInput.value.trim();
+                if (sectionName) {
+                    // Create new section
+                    const newSection = {
+                        id: generateId(),
+                        name: sectionName,
+                        cards: []
+                    };
+                    
+                    // Add to sections array
+                    sections.push(newSection);
+                    
+                    // Clear input
+                    sectionNameInput.value = '';
+                    
+                    // Render dashboard
+                    renderDashboard();
+                }
+            });
+        }
+
+        // Load data or initialize new dashboard
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!loadData()) {
+                initializeDashboard();
+            } else {
+                makeHeaderEditable();
+                addSaveButton();
+                renderDashboard();
+            }
+        });
+
+        // Add the createCardElement function that was missing
+        function createCardElement(card, sectionId) {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'card';
+
+            // Add icon if provided
+            if (card.icon) {
+                const iconImg = document.createElement('img');
+                iconImg.src = card.icon;
+                iconImg.alt = card.title;
+                cardDiv.appendChild(iconImg);
+            }
+
+            // Add title
+            const titleEl = document.createElement('div');
+            titleEl.className = 'card-title';
+            titleEl.textContent = card.title;
+            cardDiv.appendChild(titleEl);
+
+            // Add link
+            const linkEl = document.createElement('a');
+            linkEl.className = 'card-link';
+            linkEl.href = card.link.startsWith('http') ? card.link : `http://${card.link}`;
+            linkEl.target = '_blank';
+            linkEl.rel = 'noopener noreferrer';
+            linkEl.textContent = 'Open';
+            cardDiv.appendChild(linkEl);
+
+            // Add dropdown menu
+            const cardDropdown = createDropdownMenu([
+                {
+                    label: 'Edit',
+                    action: () => {
+                        const newTitle = prompt('Enter new title:', card.title);
+                        const newLink = prompt('Enter new link:', card.link);
+                        const newIcon = prompt('Enter new icon URL:', card.icon);
+                        
+                        if (newTitle && newTitle.trim()) {
+                            editCard(sectionId, card.id, {
+                                title: newTitle.trim(),
+                                link: newLink ? newLink.trim() : card.link,
+                                icon: newIcon ? newIcon.trim() : card.icon
+                            });
+                        }
+                    }
+                },
+                {
+                    label: 'Remove',
+                    class: 'delete',
+                    action: () => removeCard(sectionId, card.id)
+                }
+            ]);
+            cardDiv.appendChild(cardDropdown);
+
+            return cardDiv;
+        }
+
+        // Add the addCard function that was missing
+        function addCard(sectionId, title, link, icon) {
+            const section = sections.find(s => s.id === sectionId);
+            if (!section) return;
+
+            // Add http:// if the link doesn't start with http:// or https://
+            const formattedLink = link.match(/^https?:\/\//) ? link : `http://${link}`;
+
+            const newCard = {
+                id: generateId(),
+                title: title,
+                link: formattedLink,
+                icon: icon
+            };
+
+            section.cards.push(newCard);
+            renderDashboard();
+        }
+
+        // Add the removeCard function that was missing
+        function removeCard(sectionId, cardId) {
+            const section = sections.find(s => s.id === sectionId);
+            if (!section) return;
+            
+            section.cards = section.cards.filter(card => card.id !== cardId);
+            renderDashboard();
+        }
+
+        // Add the editCard function that was missing
+        function editCard(sectionId, cardId, updates) {
+            const section = sections.find(s => s.id === sectionId);
+            if (!section) return;
+            
+            const card = section.cards.find(c => c.id === cardId);
+            if (!card) return;
+            
+            Object.assign(card, updates);
+            renderDashboard();
+        }
+    </script>
 </body>
 
 </html>
