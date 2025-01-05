@@ -1,0 +1,3513 @@
+{
+    "icons": [
+        {
+            "name": "activitypub",
+            "keywords": [],
+            "path": "assets/activitypub.svg"
+        }
+        ,
+        {
+            "name": "actualbudget",
+            "keywords": [],
+            "path": "assets/actualbudget.svg"
+        }
+        ,
+        {
+            "name": "adafruit",
+            "keywords": [],
+            "path": "assets/adafruit.svg"
+        }
+        ,
+        {
+            "name": "adguardhome",
+            "keywords": [],
+            "path": "assets/adguardhome.svg"
+        }
+        ,
+        {
+            "name": "adminerevo",
+            "keywords": [],
+            "path": "assets/adminerevo.svg"
+        }
+        ,
+        {
+            "name": "almalinux",
+            "keywords": [],
+            "path": "assets/almalinux.svg"
+        }
+        ,
+        {
+            "name": "alpinelinux",
+            "keywords": [],
+            "path": "assets/alpinelinux.svg"
+        }
+        ,
+        {
+            "name": "amazon",
+            "keywords": [],
+            "path": "assets/amazon-smile.svg"
+        }
+        ,
+        {
+            "name": "amazon",
+            "keywords": [],
+            "path": "assets/amazon.svg"
+        }
+        ,
+        {
+            "name": "amazonwebservices",
+            "keywords": [],
+            "path": "assets/amazonwebservices.svg"
+        }
+        ,
+        {
+            "name": "amd",
+            "keywords": [],
+            "path": "assets/amd-wide.svg"
+        }
+        ,
+        {
+            "name": "amd",
+            "keywords": [],
+            "path": "assets/amd.svg"
+        }
+        ,
+        {
+            "name": "android",
+            "keywords": [],
+            "path": "assets/android.svg"
+        }
+        ,
+        {
+            "name": "ansible",
+            "keywords": [],
+            "path": "assets/ansible-black.svg"
+        }
+        ,
+        {
+            "name": "ansible",
+            "keywords": [],
+            "path": "assets/ansible-gray.svg"
+        }
+        ,
+        {
+            "name": "ansible",
+            "keywords": [],
+            "path": "assets/ansible-outline.svg"
+        }
+        ,
+        {
+            "name": "ansible",
+            "keywords": [],
+            "path": "assets/ansible-red.svg"
+        }
+        ,
+        {
+            "name": "ansible",
+            "keywords": [],
+            "path": "assets/ansible-teal.svg"
+        }
+        ,
+        {
+            "name": "antennas",
+            "keywords": [],
+            "path": "assets/antennas.svg"
+        }
+        ,
+        {
+            "name": "apachecassandra",
+            "keywords": [],
+            "path": "assets/apachecassandra.svg"
+        }
+        ,
+        {
+            "name": "apacheguacamole",
+            "keywords": [],
+            "path": "assets/apacheguacamole.svg"
+        }
+        ,
+        {
+            "name": "apachehttpd",
+            "keywords": [],
+            "path": "assets/apachehttpd.svg"
+        }
+        ,
+        {
+            "name": "apachekafka",
+            "keywords": [],
+            "path": "assets/apachekafka.svg"
+        }
+        ,
+        {
+            "name": "apacheopenoffice",
+            "keywords": [],
+            "path": "assets/apacheopenoffice.svg"
+        }
+        ,
+        {
+            "name": "apachesoftwarefoundation",
+            "keywords": [],
+            "path": "assets/apachesoftwarefoundation.svg"
+        }
+        ,
+        {
+            "name": "apachesolr",
+            "keywords": [],
+            "path": "assets/apachesolr.svg"
+        }
+        ,
+        {
+            "name": "apachesubversion",
+            "keywords": [],
+            "path": "assets/apachesubversion.svg"
+        }
+        ,
+        {
+            "name": "apachetomcat",
+            "keywords": [],
+            "path": "assets/apachetomcat.svg"
+        }
+        ,
+        {
+            "name": "apc",
+            "keywords": [],
+            "path": "assets/apc.svg"
+        }
+        ,
+        {
+            "name": "appimage",
+            "keywords": [],
+            "path": "assets/appimage.svg"
+        }
+        ,
+        {
+            "name": "apple",
+            "keywords": [],
+            "path": "assets/apple-black.svg"
+        }
+        ,
+        {
+            "name": "apple",
+            "keywords": [],
+            "path": "assets/apple-gray.svg"
+        }
+        ,
+        {
+            "name": "apple",
+            "keywords": [],
+            "path": "assets/apple-rainbow.svg"
+        }
+        ,
+        {
+            "name": "arc",
+            "keywords": [],
+            "path": "assets/arc.svg"
+        }
+        ,
+        {
+            "name": "archlinux",
+            "keywords": [],
+            "path": "assets/archlinux.svg"
+        }
+        ,
+        {
+            "name": "arduino",
+            "keywords": [],
+            "path": "assets/arduino.svg"
+        }
+        ,
+        {
+            "name": "argocd",
+            "keywords": [],
+            "path": "assets/argocd.svg"
+        }
+        ,
+        {
+            "name": "arm",
+            "keywords": [],
+            "path": "assets/arm.svg"
+        }
+        ,
+        {
+            "name": "asus",
+            "keywords": [],
+            "path": "assets/asus-router.svg"
+        }
+        ,
+        {
+            "name": "atlassian",
+            "keywords": [],
+            "path": "assets/atlassian.svg"
+        }
+        ,
+        {
+            "name": "atlassianbamboo",
+            "keywords": [],
+            "path": "assets/atlassianbamboo.svg"
+        }
+        ,
+        {
+            "name": "atlassianbitbucket",
+            "keywords": [],
+            "path": "assets/atlassianbitbucket.svg"
+        }
+        ,
+        {
+            "name": "atlassianconfluence",
+            "keywords": [],
+            "path": "assets/atlassianconfluence.svg"
+        }
+        ,
+        {
+            "name": "atlassianjira",
+            "keywords": [],
+            "path": "assets/atlassianjira.svg"
+        }
+        ,
+        {
+            "name": "atlassianopsgenie",
+            "keywords": [],
+            "path": "assets/atlassianopsgenie.svg"
+        }
+        ,
+        {
+            "name": "atlassiantrello",
+            "keywords": [],
+            "path": "assets/atlassiantrello.svg"
+        }
+        ,
+        {
+            "name": "audacity",
+            "keywords": [],
+            "path": "assets/audacity.svg"
+        }
+        ,
+        {
+            "name": "audiobookshelf",
+            "keywords": [],
+            "path": "assets/audiobookshelf.svg"
+        }
+        ,
+        {
+            "name": "auracast",
+            "keywords": [],
+            "path": "assets/auracast.svg"
+        }
+        ,
+        {
+            "name": "authelia",
+            "keywords": [],
+            "path": "assets/authelia.svg"
+        }
+        ,
+        {
+            "name": "authentik",
+            "keywords": [],
+            "path": "assets/authentik.svg"
+        }
+        ,
+        {
+            "name": "autobrr",
+            "keywords": [],
+            "path": "assets/autobrr.svg"
+        }
+        ,
+        {
+            "name": "azuracast",
+            "keywords": [],
+            "path": "assets/azuracast.svg"
+        }
+        ,
+        {
+            "name": "backblaze",
+            "keywords": [],
+            "path": "assets/backblaze.svg"
+        }
+        ,
+        {
+            "name": "bash",
+            "keywords": [],
+            "path": "assets/bash-dark.svg"
+        }
+        ,
+        {
+            "name": "bash",
+            "keywords": [],
+            "path": "assets/bash-light.svg"
+        }
+        ,
+        {
+            "name": "bazarr",
+            "keywords": [],
+            "path": "assets/bazarr.svg"
+        }
+        ,
+        {
+            "name": "beszel",
+            "keywords": [],
+            "path": "assets/beszel-green.svg"
+        }
+        ,
+        {
+            "name": "beszel",
+            "keywords": [],
+            "path": "assets/beszel-red.svg"
+        }
+        ,
+        {
+            "name": "bitcoin",
+            "keywords": [],
+            "path": "assets/bitcoin.svg"
+        }
+        ,
+        {
+            "name": "bitwarden",
+            "keywords": [],
+            "path": "assets/bitwarden.svg"
+        }
+        ,
+        {
+            "name": "bluesky",
+            "keywords": [],
+            "path": "assets/bluesky.svg"
+        }
+        ,
+        {
+            "name": "bluetooth",
+            "keywords": [],
+            "path": "assets/bluetooth.svg"
+        }
+        ,
+        {
+            "name": "bookstack",
+            "keywords": [],
+            "path": "assets/bookstack.svg"
+        }
+        ,
+        {
+            "name": "bootstrap",
+            "keywords": [],
+            "path": "assets/bootstrap.svg"
+        }
+        ,
+        {
+            "name": "borg",
+            "keywords": [],
+            "path": "assets/borg.svg"
+        }
+        ,
+        {
+            "name": "boundary",
+            "keywords": [],
+            "path": "assets/boundary.svg"
+        }
+        ,
+        {
+            "name": "brave",
+            "keywords": [],
+            "path": "assets/brave.svg"
+        }
+        ,
+        {
+            "name": "bulma",
+            "keywords": [],
+            "path": "assets/bulma.svg"
+        }
+        ,
+        {
+            "name": "c",
+            "keywords": [],
+            "path": "assets/c.svg"
+        }
+        ,
+        {
+            "name": "cacti",
+            "keywords": [],
+            "path": "assets/cacti.svg"
+        }
+        ,
+        {
+            "name": "caddy",
+            "keywords": [],
+            "path": "assets/caddy.svg"
+        }
+        ,
+        {
+            "name": "calibre",
+            "keywords": [],
+            "path": "assets/calibre.svg"
+        }
+        ,
+        {
+            "name": "canonical",
+            "keywords": [],
+            "path": "assets/canonical.svg"
+        }
+        ,
+        {
+            "name": "canonicalsnapcraft",
+            "keywords": [],
+            "path": "assets/canonicalsnapcraft.svg"
+        }
+        ,
+        {
+            "name": "canonicalubuntu",
+            "keywords": [],
+            "path": "assets/canonicalubuntu.svg"
+        }
+        ,
+        {
+            "name": "centos",
+            "keywords": [],
+            "path": "assets/centos.svg"
+        }
+        ,
+        {
+            "name": "ceph",
+            "keywords": [],
+            "path": "assets/ceph.svg"
+        }
+        ,
+        {
+            "name": "certmanager",
+            "keywords": [],
+            "path": "assets/certmanager.svg"
+        }
+        ,
+        {
+            "name": "changedetection",
+            "keywords": [],
+            "path": "assets/changedetection.svg"
+        }
+        ,
+        {
+            "name": "checkmk",
+            "keywords": [],
+            "path": "assets/checkmk.svg"
+        }
+        ,
+        {
+            "name": "chromium",
+            "keywords": [],
+            "path": "assets/chromium.svg"
+        }
+        ,
+        {
+            "name": "circleci",
+            "keywords": [],
+            "path": "assets/circleci.svg"
+        }
+        ,
+        {
+            "name": "cloudbeaver",
+            "keywords": [],
+            "path": "assets/cloudbeaver.svg"
+        }
+        ,
+        {
+            "name": "cloudflare",
+            "keywords": [],
+            "path": "assets/cloudflare.svg"
+        }
+        ,
+        {
+            "name": "cloudflarepages",
+            "keywords": [],
+            "path": "assets/cloudflarepages.svg"
+        }
+        ,
+        {
+            "name": "cloudnativecomputingfoundation",
+            "keywords": [],
+            "path": "assets/cloudnativecomputingfoundation.svg"
+        }
+        ,
+        {
+            "name": "cockpit",
+            "keywords": [],
+            "path": "assets/cockpit.svg"
+        }
+        ,
+        {
+            "name": "codeberg",
+            "keywords": [],
+            "path": "assets/codeberg.svg"
+        }
+        ,
+        {
+            "name": "composer",
+            "keywords": [],
+            "path": "assets/composer.svg"
+        }
+        ,
+        {
+            "name": "consul",
+            "keywords": [],
+            "path": "assets/consul.svg"
+        }
+        ,
+        {
+            "name": "cpanel",
+            "keywords": [],
+            "path": "assets/cpanel.svg"
+        }
+        ,
+        {
+            "name": "cplusplus",
+            "keywords": [],
+            "path": "assets/cplusplus.svg"
+        }
+        ,
+        {
+            "name": "craftycontroller",
+            "keywords": [],
+            "path": "assets/craftycontroller.svg"
+        }
+        ,
+        {
+            "name": "crowdsec",
+            "keywords": [],
+            "path": "assets/crowdsec.svg"
+        }
+        ,
+        {
+            "name": "csharp",
+            "keywords": [],
+            "path": "assets/csharp.svg"
+        }
+        ,
+        {
+            "name": "css3",
+            "keywords": [],
+            "path": "assets/css3.svg"
+        }
+        ,
+        {
+            "name": "curl",
+            "keywords": [],
+            "path": "assets/curl.svg"
+        }
+        ,
+        {
+            "name": "cyberchef",
+            "keywords": [],
+            "path": "assets/cyberchef.svg"
+        }
+        ,
+        {
+            "name": "datadog",
+            "keywords": [],
+            "path": "assets/datadog.svg"
+        }
+        ,
+        {
+            "name": "debian",
+            "keywords": [],
+            "path": "assets/debian.svg"
+        }
+        ,
+        {
+            "name": "dell",
+            "keywords": [],
+            "path": "assets/dell.svg"
+        }
+        ,
+        {
+            "name": "deluge",
+            "keywords": [],
+            "path": "assets/deluge.svg"
+        }
+        ,
+        {
+            "name": "deno",
+            "keywords": [],
+            "path": "assets/deno.svg"
+        }
+        ,
+        {
+            "name": "diagramsdotnet",
+            "keywords": [],
+            "path": "assets/diagramsdotnet.svg"
+        }
+        ,
+        {
+            "name": "digitalocean",
+            "keywords": [],
+            "path": "assets/digitalocean.svg"
+        }
+        ,
+        {
+            "name": "discord",
+            "keywords": [],
+            "path": "assets/discord.svg"
+        }
+        ,
+        {
+            "name": "discourse",
+            "keywords": [],
+            "path": "assets/discourse.svg"
+        }
+        ,
+        {
+            "name": "docker",
+            "keywords": [],
+            "path": "assets/docker-moby.svg"
+        }
+        ,
+        {
+            "name": "docker",
+            "keywords": [],
+            "path": "assets/docker.svg"
+        }
+        ,
+        {
+            "name": "dockge",
+            "keywords": [],
+            "path": "assets/dockge.svg"
+        }
+        ,
+        {
+            "name": "dockingstation",
+            "keywords": [],
+            "path": "assets/dockingstation.svg"
+        }
+        ,
+        {
+            "name": "dokuwiki",
+            "keywords": [],
+            "path": "assets/dokuwiki.svg"
+        }
+        ,
+        {
+            "name": "dotnet",
+            "keywords": [],
+            "path": "assets/dotnet.svg"
+        }
+        ,
+        {
+            "name": "dovecot",
+            "keywords": [],
+            "path": "assets/dovecot.svg"
+        }
+        ,
+        {
+            "name": "dozzle",
+            "keywords": [],
+            "path": "assets/dozzle.svg"
+        }
+        ,
+        {
+            "name": "dragonflybsd",
+            "keywords": [],
+            "path": "assets/dragonflybsd.svg"
+        }
+        ,
+        {
+            "name": "droneci",
+            "keywords": [],
+            "path": "assets/droneci.svg"
+        }
+        ,
+        {
+            "name": "drupal",
+            "keywords": [],
+            "path": "assets/drupal-druplicon.svg"
+        }
+        ,
+        {
+            "name": "drupal",
+            "keywords": [],
+            "path": "assets/drupal.svg"
+        }
+        ,
+        {
+            "name": "duckdns",
+            "keywords": [],
+            "path": "assets/duckdns.svg"
+        }
+        ,
+        {
+            "name": "duckduckgo",
+            "keywords": [],
+            "path": "assets/duckduckgo.svg"
+        }
+        ,
+        {
+            "name": "eclipsemosquitto",
+            "keywords": [],
+            "path": "assets/eclipsemosquitto.svg"
+        }
+        ,
+        {
+            "name": "elastic",
+            "keywords": [],
+            "path": "assets/elastic-beats.svg"
+        }
+        ,
+        {
+            "name": "elastic",
+            "keywords": [],
+            "path": "assets/elastic-elasticsearch.svg"
+        }
+        ,
+        {
+            "name": "elastic",
+            "keywords": [],
+            "path": "assets/elastic-kibana.svg"
+        }
+        ,
+        {
+            "name": "elastic",
+            "keywords": [],
+            "path": "assets/elastic-logstash.svg"
+        }
+        ,
+        {
+            "name": "elastic",
+            "keywords": [],
+            "path": "assets/elastic.svg"
+        }
+        ,
+        {
+            "name": "electron",
+            "keywords": [],
+            "path": "assets/electron.svg"
+        }
+        ,
+        {
+            "name": "electronicfrontierfoundation",
+            "keywords": [],
+            "path": "assets/electronicfrontierfoundation.svg"
+        }
+        ,
+        {
+            "name": "element",
+            "keywords": [],
+            "path": "assets/element.svg"
+        }
+        ,
+        {
+            "name": "elementaryos",
+            "keywords": [],
+            "path": "assets/elementaryos.svg"
+        }
+        ,
+        {
+            "name": "emacs",
+            "keywords": [],
+            "path": "assets/emacs.svg"
+        }
+        ,
+        {
+            "name": "emby",
+            "keywords": ["media", "streaming", "server", "entertainment"],
+            "path": "assets/emby.svg"
+        }
+        ,
+        {
+            "name": "esphome",
+            "keywords": [],
+            "path": "assets/esphome.svg"
+        }
+        ,
+        {
+            "name": "espressif",
+            "keywords": [],
+            "path": "assets/espressif.svg"
+        }
+        ,
+        {
+            "name": "etcd",
+            "keywords": [],
+            "path": "assets/etcd.svg"
+        }
+        ,
+        {
+            "name": "ethereum",
+            "keywords": [],
+            "path": "assets/ethereum-black.svg"
+        }
+        ,
+        {
+            "name": "ethereum",
+            "keywords": [],
+            "path": "assets/ethereum-colored.svg"
+        }
+        ,
+        {
+            "name": "ethereum",
+            "keywords": [],
+            "path": "assets/ethereum-purple.svg"
+        }
+        ,
+        {
+            "name": "excalidraw",
+            "keywords": [],
+            "path": "assets/excalidraw.svg"
+        }
+        ,
+        {
+            "name": "f5",
+            "keywords": [],
+            "path": "assets/f5.svg"
+        }
+        ,
+        {
+            "name": "facebook",
+            "keywords": [],
+            "path": "assets/facebook.svg"
+        }
+        ,
+        {
+            "name": "fastmail",
+            "keywords": [],
+            "path": "assets/fastmail.svg"
+        }
+        ,
+        {
+            "name": "ferdium",
+            "keywords": [],
+            "path": "assets/ferdium.svg"
+        }
+        ,
+        {
+            "name": "filebrowser",
+            "keywords": [],
+            "path": "assets/filebrowser.svg"
+        }
+        ,
+        {
+            "name": "filezilla",
+            "keywords": [],
+            "path": "assets/filezilla.svg"
+        }
+        ,
+        {
+            "name": "firefly",
+            "keywords": [],
+            "path": "assets/firefly-iii.svg"
+        }
+        ,
+        {
+            "name": "flathub",
+            "keywords": [],
+            "path": "assets/flathub.svg"
+        }
+        ,
+        {
+            "name": "flatnotes",
+            "keywords": [],
+            "path": "assets/flatnotes.svg"
+        }
+        ,
+        {
+            "name": "flatpak",
+            "keywords": [],
+            "path": "assets/flatpak-black.svg"
+        }
+        ,
+        {
+            "name": "flatpak",
+            "keywords": [],
+            "path": "assets/flatpak-white.svg"
+        }
+        ,
+        {
+            "name": "fluxcd",
+            "keywords": [],
+            "path": "assets/fluxcd.svg"
+        }
+        ,
+        {
+            "name": "focalboard",
+            "keywords": [],
+            "path": "assets/focalboard.svg"
+        }
+        ,
+        {
+            "name": "forgejo",
+            "keywords": [],
+            "path": "assets/forgejo.svg"
+        }
+        ,
+        {
+            "name": "fortinet",
+            "keywords": [],
+            "path": "assets/fortinet.svg"
+        }
+        ,
+        {
+            "name": "fossil",
+            "keywords": [],
+            "path": "assets/fossil.svg"
+        }
+        ,
+        {
+            "name": "framework",
+            "keywords": [],
+            "path": "assets/framework.svg"
+        }
+        ,
+        {
+            "name": "freebsd",
+            "keywords": [],
+            "path": "assets/freebsd.svg"
+        }
+        ,
+        {
+            "name": "freeipa",
+            "keywords": [],
+            "path": "assets/freeipa.svg"
+        }
+        ,
+        {
+            "name": "freenas",
+            "keywords": [],
+            "path": "assets/freenas.svg"
+        }
+        ,
+        {
+            "name": "freesoftwarefoundation",
+            "keywords": [],
+            "path": "assets/freesoftwarefoundation.svg"
+        }
+        ,
+        {
+            "name": "freshrss",
+            "keywords": [],
+            "path": "assets/freshrss.svg"
+        }
+        ,
+        {
+            "name": "frigate",
+            "keywords": [],
+            "path": "assets/frigate.svg"
+        }
+        ,
+        {
+            "name": "fsharp",
+            "keywords": [],
+            "path": "assets/fsharp.svg"
+        }
+        ,
+        {
+            "name": "gatsby",
+            "keywords": [],
+            "path": "assets/gatsby.svg"
+        }
+        ,
+        {
+            "name": "gentoolinux",
+            "keywords": [],
+            "path": "assets/gentoolinux.svg"
+        }
+        ,
+        {
+            "name": "gimp",
+            "keywords": [],
+            "path": "assets/gimp.svg"
+        }
+        ,
+        {
+            "name": "git",
+            "keywords": [],
+            "path": "assets/git.svg"
+        }
+        ,
+        {
+            "name": "gitbook",
+            "keywords": [],
+            "path": "assets/gitbook.svg"
+        }
+        ,
+        {
+            "name": "gitea",
+            "keywords": [],
+            "path": "assets/gitea.svg"
+        }
+        ,
+        {
+            "name": "github",
+            "keywords": [],
+            "path": "assets/github-invertocat.svg"
+        }
+        ,
+        {
+            "name": "github",
+            "keywords": [],
+            "path": "assets/github-octocat.svg"
+        }
+        ,
+        {
+            "name": "gitlab",
+            "keywords": [],
+            "path": "assets/gitlab.svg"
+        }
+        ,
+        {
+            "name": "gluetun",
+            "keywords": [],
+            "path": "assets/gluetun.svg"
+        }
+        ,
+        {
+            "name": "gnome",
+            "keywords": [],
+            "path": "assets/gnome.svg"
+        }
+        ,
+        {
+            "name": "gnu",
+            "keywords": [],
+            "path": "assets/gnu.svg"
+        }
+        ,
+        {
+            "name": "gnupg",
+            "keywords": [],
+            "path": "assets/gnupg.svg"
+        }
+        ,
+        {
+            "name": "go",
+            "keywords": [],
+            "path": "assets/go-black.svg"
+        }
+        ,
+        {
+            "name": "go",
+            "keywords": [],
+            "path": "assets/go-blue.svg"
+        }
+        ,
+        {
+            "name": "gogs",
+            "keywords": [],
+            "path": "assets/gogs.svg"
+        }
+        ,
+        {
+            "name": "google",
+            "keywords": [],
+            "path": "assets/google.svg"
+        }
+        ,
+        {
+            "name": "googlecalendar",
+            "keywords": [],
+            "path": "assets/googlecalendar.svg"
+        }
+        ,
+        {
+            "name": "googlechrome",
+            "keywords": [],
+            "path": "assets/googlechrome.svg"
+        }
+        ,
+        {
+            "name": "googlecloudplatform",
+            "keywords": [],
+            "path": "assets/googlecloudplatform.svg"
+        }
+        ,
+        {
+            "name": "googledrive",
+            "keywords": [],
+            "path": "assets/googledrive.svg"
+        }
+        ,
+        {
+            "name": "googlefirebase",
+            "keywords": [],
+            "path": "assets/googlefirebase.svg"
+        }
+        ,
+        {
+            "name": "googlemail",
+            "keywords": [],
+            "path": "assets/googlemail.svg"
+        }
+        ,
+        {
+            "name": "gotify",
+            "keywords": [],
+            "path": "assets/gotify.svg"
+        }
+        ,
+        {
+            "name": "grafana",
+            "keywords": ["monitoring", "metrics", "dashboard", "analytics", "visualization"],
+            "path": "assets/grafana.svg"
+        }
+        ,
+        {
+            "name": "grafanaloki",
+            "keywords": [],
+            "path": "assets/grafanaloki.svg"
+        }
+        ,
+        {
+            "name": "grapheneos",
+            "keywords": [],
+            "path": "assets/grapheneos.svg"
+        }
+        ,
+        {
+            "name": "grav",
+            "keywords": [],
+            "path": "assets/grav.svg"
+        }
+        ,
+        {
+            "name": "graylog",
+            "keywords": [],
+            "path": "assets/graylog.svg"
+        }
+        ,
+        {
+            "name": "greenboneopenvas",
+            "keywords": [],
+            "path": "assets/greenboneopenvas.svg"
+        }
+        ,
+        {
+            "name": "grocy",
+            "keywords": [],
+            "path": "assets/grocy.svg"
+        }
+        ,
+        {
+            "name": "guilded",
+            "keywords": [],
+            "path": "assets/guilded.svg"
+        }
+        ,
+        {
+            "name": "harbor",
+            "keywords": [],
+            "path": "assets/harbor.svg"
+        }
+        ,
+        {
+            "name": "harvester",
+            "keywords": [],
+            "path": "assets/harvester.svg"
+        }
+        ,
+        {
+            "name": "hashicorp",
+            "keywords": [],
+            "path": "assets/hashicorp-black.svg"
+        }
+        ,
+        {
+            "name": "hashicorp",
+            "keywords": [],
+            "path": "assets/hashicorp-white.svg"
+        }
+        ,
+        {
+            "name": "headscale",
+            "keywords": [],
+            "path": "assets/headscale.svg"
+        }
+        ,
+        {
+            "name": "hedgedoc",
+            "keywords": [],
+            "path": "assets/hedgedoc.svg"
+        }
+        ,
+        {
+            "name": "helm",
+            "keywords": [],
+            "path": "assets/helm.svg"
+        }
+        ,
+        {
+            "name": "heroku",
+            "keywords": [],
+            "path": "assets/heroku.svg"
+        }
+        ,
+        {
+            "name": "hetzner",
+            "keywords": [],
+            "path": "assets/hetzner.svg"
+        }
+        ,
+        {
+            "name": "homarr",
+            "keywords": [],
+            "path": "assets/homarr.svg"
+        }
+        ,
+        {
+            "name": "homeassistant",
+            "keywords": ["home", "automation", "smart-home", "iot"],
+            "path": "assets/homeassistant-small.svg"
+        }
+        ,
+        {
+            "name": "homeassistant",
+            "keywords": ["home", "automation", "smart-home", "iot"],
+            "path": "assets/homeassistant.svg"
+        }
+        ,
+        {
+            "name": "homebox",
+            "keywords": [],
+            "path": "assets/homebox.svg"
+        }
+        ,
+        {
+            "name": "homebrew",
+            "keywords": [],
+            "path": "assets/homebrew.svg"
+        }
+        ,
+        {
+            "name": "homer",
+            "keywords": [],
+            "path": "assets/homer.svg"
+        }
+        ,
+        {
+            "name": "hp",
+            "keywords": [],
+            "path": "assets/hp-black.svg"
+        }
+        ,
+        {
+            "name": "hp",
+            "keywords": [],
+            "path": "assets/hp-white.svg"
+        }
+        ,
+        {
+            "name": "html5",
+            "keywords": [],
+            "path": "assets/html5.svg"
+        }
+        ,
+        {
+            "name": "huggingface",
+            "keywords": [],
+            "path": "assets/huggingface.svg"
+        }
+        ,
+        {
+            "name": "huginn",
+            "keywords": [],
+            "path": "assets/huginn.svg"
+        }
+        ,
+        {
+            "name": "hugo",
+            "keywords": [],
+            "path": "assets/hugo.svg"
+        }
+        ,
+        {
+            "name": "ibm",
+            "keywords": [],
+            "path": "assets/ibm-8bar-black.svg"
+        }
+        ,
+        {
+            "name": "ibm",
+            "keywords": [],
+            "path": "assets/ibm-8bar-blue.svg"
+        }
+        ,
+        {
+            "name": "ibm",
+            "keywords": [],
+            "path": "assets/ibm-rebus-black.svg"
+        }
+        ,
+        {
+            "name": "ibm",
+            "keywords": [],
+            "path": "assets/ibm-rebus-blue.svg"
+        }
+        ,
+        {
+            "name": "immich",
+            "keywords": [],
+            "path": "assets/immich.svg"
+        }
+        ,
+        {
+            "name": "influx",
+            "keywords": [],
+            "path": "assets/influx.svg"
+        }
+        ,
+        {
+            "name": "inkscape",
+            "keywords": [],
+            "path": "assets/inkscape.svg"
+        }
+        ,
+        {
+            "name": "instagram",
+            "keywords": [],
+            "path": "assets/instagram.svg"
+        }
+        ,
+        {
+            "name": "intel",
+            "keywords": [],
+            "path": "assets/intel-circle.svg"
+        }
+        ,
+        {
+            "name": "intel",
+            "keywords": [],
+            "path": "assets/intel.svg"
+        }
+        ,
+        {
+            "name": "invidious",
+            "keywords": [],
+            "path": "assets/invidious.svg"
+        }
+        ,
+        {
+            "name": "ipfs",
+            "keywords": [],
+            "path": "assets/ipfs.svg"
+        }
+        ,
+        {
+            "name": "istio",
+            "keywords": [],
+            "path": "assets/istio.svg"
+        }
+        ,
+        {
+            "name": "ittools",
+            "keywords": [],
+            "path": "assets/ittools.svg"
+        }
+        ,
+        {
+            "name": "ixsystems",
+            "keywords": [],
+            "path": "assets/ixsystems.svg"
+        }
+        ,
+        {
+            "name": "jackett",
+            "keywords": [],
+            "path": "assets/jackett.svg"
+        }
+        ,
+        {
+            "name": "jaeger",
+            "keywords": [],
+            "path": "assets/jaeger.svg"
+        }
+        ,
+        {
+            "name": "jamstack",
+            "keywords": [],
+            "path": "assets/jamstack.svg"
+        }
+        ,
+        {
+            "name": "javascript",
+            "keywords": [],
+            "path": "assets/javascript.svg"
+        }
+        ,
+        {
+            "name": "jekyll",
+            "keywords": [],
+            "path": "assets/jekyll.svg"
+        }
+        ,
+        {
+            "name": "jellyfin",
+            "keywords": ["media", "streaming", "server", "entertainment"],
+            "path": "assets/jellyfin.svg"
+        }
+        ,
+        {
+            "name": "jellyseerr",
+            "keywords": [],
+            "path": "assets/jellyseerr.svg"
+        }
+        ,
+        {
+            "name": "jenkins",
+            "keywords": [],
+            "path": "assets/jenkins.svg"
+        }
+        ,
+        {
+            "name": "jfrog",
+            "keywords": [],
+            "path": "assets/jfrog.svg"
+        }
+        ,
+        {
+            "name": "jfrogartifactory",
+            "keywords": [],
+            "path": "assets/jfrogartifactory.svg"
+        }
+        ,
+        {
+            "name": "jitsi",
+            "keywords": [],
+            "path": "assets/jitsi.svg"
+        }
+        ,
+        {
+            "name": "joplin",
+            "keywords": [],
+            "path": "assets/joplin.svg"
+        }
+        ,
+        {
+            "name": "json",
+            "keywords": [],
+            "path": "assets/json.svg"
+        }
+        ,
+        {
+            "name": "jupyter",
+            "keywords": [],
+            "path": "assets/jupyter.svg"
+        }
+        ,
+        {
+            "name": "k0s",
+            "keywords": [],
+            "path": "assets/k0s.svg"
+        }
+        ,
+        {
+            "name": "k3os",
+            "keywords": [],
+            "path": "assets/k3os.svg"
+        }
+        ,
+        {
+            "name": "k3s",
+            "keywords": [],
+            "path": "assets/k3s.svg"
+        }
+        ,
+        {
+            "name": "kalilinux",
+            "keywords": [],
+            "path": "assets/kalilinux.svg"
+        }
+        ,
+        {
+            "name": "kanboard",
+            "keywords": [],
+            "path": "assets/kanboard.svg"
+        }
+        ,
+        {
+            "name": "kasm",
+            "keywords": [],
+            "path": "assets/kasm.svg"
+        }
+        ,
+        {
+            "name": "kavita",
+            "keywords": [],
+            "path": "assets/kavita.svg"
+        }
+        ,
+        {
+            "name": "kbin",
+            "keywords": [],
+            "path": "assets/kbin.svg"
+        }
+        ,
+        {
+            "name": "kde",
+            "keywords": [],
+            "path": "assets/kde.svg"
+        }
+        ,
+        {
+            "name": "kdeplasma",
+            "keywords": [],
+            "path": "assets/kdeplasma.svg"
+        }
+        ,
+        {
+            "name": "keepassxc",
+            "keywords": [],
+            "path": "assets/keepassxc.svg"
+        }
+        ,
+        {
+            "name": "kiwix",
+            "keywords": [],
+            "path": "assets/kiwix.svg"
+        }
+        ,
+        {
+            "name": "kodi",
+            "keywords": [],
+            "path": "assets/kodi.svg"
+        }
+        ,
+        {
+            "name": "kubernetes",
+            "keywords": [],
+            "path": "assets/kubernetes.svg"
+        }
+        ,
+        {
+            "name": "latex",
+            "keywords": [],
+            "path": "assets/latex-wide.svg"
+        }
+        ,
+        {
+            "name": "latex",
+            "keywords": [],
+            "path": "assets/latex.svg"
+        }
+        ,
+        {
+            "name": "ledger",
+            "keywords": [],
+            "path": "assets/ledger.svg"
+        }
+        ,
+        {
+            "name": "lemmy",
+            "keywords": [],
+            "path": "assets/lemmy.svg"
+        }
+        ,
+        {
+            "name": "lenovo",
+            "keywords": [],
+            "path": "assets/lenovo.svg"
+        }
+        ,
+        {
+            "name": "letsencrypt",
+            "keywords": [],
+            "path": "assets/letsencrypt.svg"
+        }
+        ,
+        {
+            "name": "liberadotchat",
+            "keywords": [],
+            "path": "assets/liberadotchat.svg"
+        }
+        ,
+        {
+            "name": "liberapay",
+            "keywords": [],
+            "path": "assets/liberapay-black.svg"
+        }
+        ,
+        {
+            "name": "liberapay",
+            "keywords": [],
+            "path": "assets/liberapay-white.svg"
+        }
+        ,
+        {
+            "name": "librenms",
+            "keywords": [],
+            "path": "assets/librenms-black.svg"
+        }
+        ,
+        {
+            "name": "librenms",
+            "keywords": [],
+            "path": "assets/librenms-white.svg"
+        }
+        ,
+        {
+            "name": "libreoffice",
+            "keywords": [],
+            "path": "assets/libreoffice.svg"
+        }
+        ,
+        {
+            "name": "lidarr",
+            "keywords": [],
+            "path": "assets/lidarr.svg"
+        }
+        ,
+        {
+            "name": "lineageos",
+            "keywords": [],
+            "path": "assets/lineageos.svg"
+        }
+        ,
+        {
+            "name": "linkedin",
+            "keywords": [],
+            "path": "assets/linkedin.svg"
+        }
+        ,
+        {
+            "name": "linode",
+            "keywords": [],
+            "path": "assets/linode.svg"
+        }
+        ,
+        {
+            "name": "linux",
+            "keywords": [],
+            "path": "assets/linux.svg"
+        }
+        ,
+        {
+            "name": "linuxfoundation",
+            "keywords": [],
+            "path": "assets/linuxfoundation.svg"
+        }
+        ,
+        {
+            "name": "linuxmint",
+            "keywords": [],
+            "path": "assets/linuxmint.svg"
+        }
+        ,
+        {
+            "name": "linuxserverio",
+            "keywords": [],
+            "path": "assets/linuxserverio.svg"
+        }
+        ,
+        {
+            "name": "longhorn",
+            "keywords": [],
+            "path": "assets/longhorn.svg"
+        }
+        ,
+        {
+            "name": "lxc",
+            "keywords": [],
+            "path": "assets/lxc.svg"
+        }
+        ,
+        {
+            "name": "lxde",
+            "keywords": [],
+            "path": "assets/lxde-gray.svg"
+        }
+        ,
+        {
+            "name": "lxde",
+            "keywords": [],
+            "path": "assets/lxde-white.svg"
+        }
+        ,
+        {
+            "name": "mailcow",
+            "keywords": [],
+            "path": "assets/mailcow.svg"
+        }
+        ,
+        {
+            "name": "mailinabox",
+            "keywords": [],
+            "path": "assets/mailinabox.svg"
+        }
+        ,
+        {
+            "name": "manjaro",
+            "keywords": [],
+            "path": "assets/manjaro.svg"
+        }
+        ,
+        {
+            "name": "manyfold",
+            "keywords": [],
+            "path": "assets/manyfold.svg"
+        }
+        ,
+        {
+            "name": "mariadb",
+            "keywords": [],
+            "path": "assets/mariadb.svg"
+        }
+        ,
+        {
+            "name": "markdown",
+            "keywords": [],
+            "path": "assets/markdown-solid.svg"
+        }
+        ,
+        {
+            "name": "markdown",
+            "keywords": [],
+            "path": "assets/markdown.svg"
+        }
+        ,
+        {
+            "name": "mastodon",
+            "keywords": [],
+            "path": "assets/mastodon-no-gradient.svg"
+        }
+        ,
+        {
+            "name": "mastodon",
+            "keywords": [],
+            "path": "assets/mastodon.svg"
+        }
+        ,
+        {
+            "name": "matrix",
+            "keywords": [],
+            "path": "assets/matrix-black.svg"
+        }
+        ,
+        {
+            "name": "matrix",
+            "keywords": [],
+            "path": "assets/matrix-white.svg"
+        }
+        ,
+        {
+            "name": "mattermost",
+            "keywords": [],
+            "path": "assets/mattermost-black.svg"
+        }
+        ,
+        {
+            "name": "mattermost",
+            "keywords": [],
+            "path": "assets/mattermost-blue.svg"
+        }
+        ,
+        {
+            "name": "maxmind",
+            "keywords": [],
+            "path": "assets/maxmind.svg"
+        }
+        ,
+        {
+            "name": "mealie",
+            "keywords": [],
+            "path": "assets/mealie.svg"
+        }
+        ,
+        {
+            "name": "mediawiki",
+            "keywords": [],
+            "path": "assets/mediawiki-large.svg"
+        }
+        ,
+        {
+            "name": "mediawiki",
+            "keywords": [],
+            "path": "assets/mediawiki-medium.svg"
+        }
+        ,
+        {
+            "name": "mediawiki",
+            "keywords": [],
+            "path": "assets/mediawiki-small.svg"
+        }
+        ,
+        {
+            "name": "memcached",
+            "keywords": [],
+            "path": "assets/memcached.svg"
+        }
+        ,
+        {
+            "name": "mercurial",
+            "keywords": [],
+            "path": "assets/mercurial.svg"
+        }
+        ,
+        {
+            "name": "meshtastic",
+            "keywords": [],
+            "path": "assets/meshtastic.svg"
+        }
+        ,
+        {
+            "name": "microsoft",
+            "keywords": [],
+            "path": "assets/microsoft.svg"
+        }
+        ,
+        {
+            "name": "microsoftazure",
+            "keywords": [],
+            "path": "assets/microsoftazure.svg"
+        }
+        ,
+        {
+            "name": "microsoftedge",
+            "keywords": [],
+            "path": "assets/microsoftedge.svg"
+        }
+        ,
+        {
+            "name": "microsoftpowershell",
+            "keywords": [],
+            "path": "assets/microsoftpowershell.svg"
+        }
+        ,
+        {
+            "name": "microsoftsqlserver",
+            "keywords": [],
+            "path": "assets/microsoftsqlserver.svg"
+        }
+        ,
+        {
+            "name": "mikrotik",
+            "keywords": [],
+            "path": "assets/mikrotik.svg"
+        }
+        ,
+        {
+            "name": "miniflux",
+            "keywords": [],
+            "path": "assets/miniflux.svg"
+        }
+        ,
+        {
+            "name": "minikube",
+            "keywords": [],
+            "path": "assets/minikube.svg"
+        }
+        ,
+        {
+            "name": "minio",
+            "keywords": [],
+            "path": "assets/minio.svg"
+        }
+        ,
+        {
+            "name": "monero",
+            "keywords": [],
+            "path": "assets/monero.svg"
+        }
+        ,
+        {
+            "name": "mongodb",
+            "keywords": [],
+            "path": "assets/mongodb-forest-green.svg"
+        }
+        ,
+        {
+            "name": "mongodb",
+            "keywords": [],
+            "path": "assets/mongodb-spring-green.svg"
+        }
+        ,
+        {
+            "name": "monica",
+            "keywords": [],
+            "path": "assets/monica.svg"
+        }
+        ,
+        {
+            "name": "mozilla",
+            "keywords": [],
+            "path": "assets/mozilla.svg"
+        }
+        ,
+        {
+            "name": "mozillafirefox",
+            "keywords": [],
+            "path": "assets/mozillafirefox.svg"
+        }
+        ,
+        {
+            "name": "mozillafirefoxbrowser",
+            "keywords": [],
+            "path": "assets/mozillafirefoxbrowser.svg"
+        }
+        ,
+        {
+            "name": "mozillafirefoxbrowserbeta",
+            "keywords": [],
+            "path": "assets/mozillafirefoxbrowserbeta.svg"
+        }
+        ,
+        {
+            "name": "mozillafirefoxbrowserdeveloper",
+            "keywords": [],
+            "path": "assets/mozillafirefoxbrowserdeveloper.svg"
+        }
+        ,
+        {
+            "name": "mozillafirefoxbrowsernightly",
+            "keywords": [],
+            "path": "assets/mozillafirefoxbrowsernightly.svg"
+        }
+        ,
+        {
+            "name": "mozillathunderbird",
+            "keywords": [],
+            "path": "assets/mozillathunderbird.svg"
+        }
+        ,
+        {
+            "name": "mqtt",
+            "keywords": [],
+            "path": "assets/mqtt.svg"
+        }
+        ,
+        {
+            "name": "mullvad",
+            "keywords": [],
+            "path": "assets/mullvad.svg"
+        }
+        ,
+        {
+            "name": "munin",
+            "keywords": [],
+            "path": "assets/munin.svg"
+        }
+        ,
+        {
+            "name": "mysql",
+            "keywords": [],
+            "path": "assets/mysql.svg"
+        }
+        ,
+        {
+            "name": "n8n",
+            "keywords": [],
+            "path": "assets/n8n.svg"
+        }
+        ,
+        {
+            "name": "navidrome",
+            "keywords": [],
+            "path": "assets/navidrome.svg"
+        }
+        ,
+        {
+            "name": "netbox",
+            "keywords": [],
+            "path": "assets/netbox.svg"
+        }
+        ,
+        {
+            "name": "netdata",
+            "keywords": [],
+            "path": "assets/netdata.svg"
+        }
+        ,
+        {
+            "name": "netlify",
+            "keywords": [],
+            "path": "assets/netlify-dark.svg"
+        }
+        ,
+        {
+            "name": "netlify",
+            "keywords": [],
+            "path": "assets/netlify-light.svg"
+        }
+        ,
+        {
+            "name": "networkupstools",
+            "keywords": [],
+            "path": "assets/networkupstools.svg"
+        }
+        ,
+        {
+            "name": "nextcloud",
+            "keywords": ["storage", "cloud", "file-sharing", "collaboration"],
+            "path": "assets/nextcloud.svg"
+        }
+        ,
+        {
+            "name": "nexterm",
+            "keywords": [],
+            "path": "assets/nexterm.svg"
+        }
+        ,
+        {
+            "name": "nginx",
+            "keywords": ["web", "server", "proxy", "reverse-proxy", "load-balancer"],
+            "path": "assets/nginx.svg"
+        }
+        ,
+        {
+            "name": "nginxproxymanager",
+            "keywords": [],
+            "path": "assets/nginxproxymanager.svg"
+        }
+        ,
+        {
+            "name": "nitter",
+            "keywords": [],
+            "path": "assets/nitter.svg"
+        }
+        ,
+        {
+            "name": "nixos",
+            "keywords": [],
+            "path": "assets/nixos.svg"
+        }
+        ,
+        {
+            "name": "nlnetfoundation",
+            "keywords": [],
+            "path": "assets/nlnetfoundation.svg"
+        }
+        ,
+        {
+            "name": "nlnetlabs",
+            "keywords": [],
+            "path": "assets/nlnetlabs.svg"
+        }
+        ,
+        {
+            "name": "nodejs",
+            "keywords": [],
+            "path": "assets/nodejs.svg"
+        }
+        ,
+        {
+            "name": "nodered",
+            "keywords": [],
+            "path": "assets/nodered.svg"
+        }
+        ,
+        {
+            "name": "nomad",
+            "keywords": [],
+            "path": "assets/nomad.svg"
+        }
+        ,
+        {
+            "name": "npm",
+            "keywords": [],
+            "path": "assets/npm.svg"
+        }
+        ,
+        {
+            "name": "ntfy",
+            "keywords": [],
+            "path": "assets/ntfy.svg"
+        }
+        ,
+        {
+            "name": "nvidia",
+            "keywords": [],
+            "path": "assets/nvidia-wide.svg"
+        }
+        ,
+        {
+            "name": "nvidia",
+            "keywords": [],
+            "path": "assets/nvidia.svg"
+        }
+        ,
+        {
+            "name": "obsidian",
+            "keywords": [],
+            "path": "assets/obsidian.svg"
+        }
+        ,
+        {
+            "name": "obsstudio",
+            "keywords": [],
+            "path": "assets/obsstudio.svg"
+        }
+        ,
+        {
+            "name": "octoprint",
+            "keywords": [],
+            "path": "assets/octoprint.svg"
+        }
+        ,
+        {
+            "name": "ollama",
+            "keywords": [],
+            "path": "assets/ollama-black.svg"
+        }
+        ,
+        {
+            "name": "ollama",
+            "keywords": [],
+            "path": "assets/ollama-white.svg"
+        }
+        ,
+        {
+            "name": "ombi",
+            "keywords": [],
+            "path": "assets/ombi.svg"
+        }
+        ,
+        {
+            "name": "onedev",
+            "keywords": [],
+            "path": "assets/onedev.svg"
+        }
+        ,
+        {
+            "name": "openai",
+            "keywords": [],
+            "path": "assets/openai-black.svg"
+        }
+        ,
+        {
+            "name": "openai",
+            "keywords": [],
+            "path": "assets/openai-white.svg"
+        }
+        ,
+        {
+            "name": "openapiinitiative",
+            "keywords": [],
+            "path": "assets/openapiinitiative.svg"
+        }
+        ,
+        {
+            "name": "openbao",
+            "keywords": [],
+            "path": "assets/openbao.svg"
+        }
+        ,
+        {
+            "name": "openbsd",
+            "keywords": [],
+            "path": "assets/openbsd.svg"
+        }
+        ,
+        {
+            "name": "opencollective",
+            "keywords": [],
+            "path": "assets/opencollective.svg"
+        }
+        ,
+        {
+            "name": "opencontainerinitiative",
+            "keywords": [],
+            "path": "assets/opencontainerinitiative.svg"
+        }
+        ,
+        {
+            "name": "openhab",
+            "keywords": [],
+            "path": "assets/openhab.svg"
+        }
+        ,
+        {
+            "name": "openjdk",
+            "keywords": [],
+            "path": "assets/openjdk.svg"
+        }
+        ,
+        {
+            "name": "openmediavault",
+            "keywords": [],
+            "path": "assets/openmediavault.svg"
+        }
+        ,
+        {
+            "name": "opensearch",
+            "keywords": [],
+            "path": "assets/opensearch.svg"
+        }
+        ,
+        {
+            "name": "opensourcehardware",
+            "keywords": [],
+            "path": "assets/opensourcehardware.svg"
+        }
+        ,
+        {
+            "name": "opensourceinitiative",
+            "keywords": [],
+            "path": "assets/opensourceinitiative.svg"
+        }
+        ,
+        {
+            "name": "openstack",
+            "keywords": [],
+            "path": "assets/openstack.svg"
+        }
+        ,
+        {
+            "name": "opensuse",
+            "keywords": [],
+            "path": "assets/opensuse.svg"
+        }
+        ,
+        {
+            "name": "opentofu",
+            "keywords": [],
+            "path": "assets/opentofu.svg"
+        }
+        ,
+        {
+            "name": "opentogethertube",
+            "keywords": [],
+            "path": "assets/opentogethertube.svg"
+        }
+        ,
+        {
+            "name": "openvpn",
+            "keywords": [],
+            "path": "assets/openvpn.svg"
+        }
+        ,
+        {
+            "name": "openwrt",
+            "keywords": [],
+            "path": "assets/openwrt.svg"
+        }
+        ,
+        {
+            "name": "openzfs",
+            "keywords": [],
+            "path": "assets/openzfs.svg"
+        }
+        ,
+        {
+            "name": "opera",
+            "keywords": [],
+            "path": "assets/opera.svg"
+        }
+        ,
+        {
+            "name": "opnsense",
+            "keywords": [],
+            "path": "assets/opnsense.svg"
+        }
+        ,
+        {
+            "name": "outline",
+            "keywords": [],
+            "path": "assets/outline.svg"
+        }
+        ,
+        {
+            "name": "overseerr",
+            "keywords": [],
+            "path": "assets/overseerr.svg"
+        }
+        ,
+        {
+            "name": "ovh",
+            "keywords": [],
+            "path": "assets/ovh.svg"
+        }
+        ,
+        {
+            "name": "owncloud",
+            "keywords": [],
+            "path": "assets/owncloud.svg"
+        }
+        ,
+        {
+            "name": "packer",
+            "keywords": [],
+            "path": "assets/packer.svg"
+        }
+        ,
+        {
+            "name": "pairdrop",
+            "keywords": [],
+            "path": "assets/pairdrop.svg"
+        }
+        ,
+        {
+            "name": "paloaltonetworks",
+            "keywords": [],
+            "path": "assets/paloaltonetworks.svg"
+        }
+        ,
+        {
+            "name": "paperlessng",
+            "keywords": [],
+            "path": "assets/paperlessng.svg"
+        }
+        ,
+        {
+            "name": "peertube",
+            "keywords": [],
+            "path": "assets/peertube.svg"
+        }
+        ,
+        {
+            "name": "perl",
+            "keywords": [],
+            "path": "assets/perl.svg"
+        }
+        ,
+        {
+            "name": "pfsense",
+            "keywords": [],
+            "path": "assets/pfsense-black.svg"
+        }
+        ,
+        {
+            "name": "pfsense",
+            "keywords": [],
+            "path": "assets/pfsense-blue.svg"
+        }
+        ,
+        {
+            "name": "photoprism",
+            "keywords": [],
+            "path": "assets/photoprism.svg"
+        }
+        ,
+        {
+            "name": "php",
+            "keywords": [],
+            "path": "assets/php.svg"
+        }
+        ,
+        {
+            "name": "phpmyadmin",
+            "keywords": [],
+            "path": "assets/phpmyadmin.svg"
+        }
+        ,
+        {
+            "name": "pihole",
+            "keywords": ["dns", "ad-blocking", "network", "filtering"],
+            "path": "assets/pihole.svg"
+        }
+        ,
+        {
+            "name": "pikvm",
+            "keywords": [],
+            "path": "assets/pikvm.svg"
+        }
+        ,
+        {
+            "name": "plane",
+            "keywords": [],
+            "path": "assets/plane.svg"
+        }
+        ,
+        {
+            "name": "planka",
+            "keywords": [],
+            "path": "assets/planka.svg"
+        }
+        ,
+        {
+            "name": "plausible",
+            "keywords": [],
+            "path": "assets/plausible.svg"
+        }
+        ,
+        {
+            "name": "plex",
+            "keywords": ["media", "streaming", "server", "entertainment"],
+            "path": "assets/plex-black.svg"
+        }
+        ,
+        {
+            "name": "plex",
+            "keywords": ["media", "streaming", "server", "entertainment"],
+            "path": "assets/plex-white.svg"
+        }
+        ,
+        {
+            "name": "plex",
+            "keywords": ["media", "streaming", "server", "entertainment"],
+            "path": "assets/plex.svg"
+        }
+        ,
+        {
+            "name": "podcastindex",
+            "keywords": [],
+            "path": "assets/podcastindex.svg"
+        }
+        ,
+        {
+            "name": "podman",
+            "keywords": [],
+            "path": "assets/podman.svg"
+        }
+        ,
+        {
+            "name": "popos",
+            "keywords": [],
+            "path": "assets/popos.svg"
+        }
+        ,
+        {
+            "name": "portainer",
+            "keywords": ["docker", "container", "management", "infrastructure"],
+            "path": "assets/portainer.svg"
+        }
+        ,
+        {
+            "name": "postgresql",
+            "keywords": [],
+            "path": "assets/postgresql.svg"
+        }
+        ,
+        {
+            "name": "pritunl",
+            "keywords": [],
+            "path": "assets/pritunl.svg"
+        }
+        ,
+        {
+            "name": "privatebin",
+            "keywords": [],
+            "path": "assets/privatebin.svg"
+        }
+        ,
+        {
+            "name": "privateinternetaccess",
+            "keywords": [],
+            "path": "assets/privateinternetaccess.svg"
+        }
+        ,
+        {
+            "name": "prometheus",
+            "keywords": ["monitoring", "metrics", "time-series", "alerting"],
+            "path": "assets/prometheus.svg"
+        }
+        ,
+        {
+            "name": "proton",
+            "keywords": [],
+            "path": "assets/proton.svg"
+        }
+        ,
+        {
+            "name": "prowlarr",
+            "keywords": [],
+            "path": "assets/prowlarr.svg"
+        }
+        ,
+        {
+            "name": "proxmox",
+            "keywords": [],
+            "path": "assets/proxmox.svg"
+        }
+        ,
+        {
+            "name": "pulumi",
+            "keywords": [],
+            "path": "assets/pulumi.svg"
+        }
+        ,
+        {
+            "name": "pushover",
+            "keywords": [],
+            "path": "assets/pushover.svg"
+        }
+        ,
+        {
+            "name": "putty",
+            "keywords": [],
+            "path": "assets/putty.svg"
+        }
+        ,
+        {
+            "name": "pypi",
+            "keywords": [],
+            "path": "assets/pypi.svg"
+        }
+        ,
+        {
+            "name": "python",
+            "keywords": [],
+            "path": "assets/python.svg"
+        }
+        ,
+        {
+            "name": "qbittorrent",
+            "keywords": ["torrent", "download", "peer-to-peer", "p2p"],
+            "path": "assets/qbittorrent.svg"
+        }
+        ,
+        {
+            "name": "qemu",
+            "keywords": [],
+            "path": "assets/qemu.svg"
+        }
+        ,
+        {
+            "name": "qnap",
+            "keywords": [],
+            "path": "assets/qnap.svg"
+        }
+        ,
+        {
+            "name": "radarr",
+            "keywords": ["movies", "media", "automation", "downloads"],
+            "path": "assets/radarr.svg"
+        }
+        ,
+        {
+            "name": "radicale",
+            "keywords": [],
+            "path": "assets/radicale.svg"
+        }
+        ,
+        {
+            "name": "rancher",
+            "keywords": [],
+            "path": "assets/rancher.svg"
+        }
+        ,
+        {
+            "name": "rapid7",
+            "keywords": [],
+            "path": "assets/rapid7-dark.svg"
+        }
+        ,
+        {
+            "name": "rapid7",
+            "keywords": [],
+            "path": "assets/rapid7-light.svg"
+        }
+        ,
+        {
+            "name": "raspberrypi",
+            "keywords": [],
+            "path": "assets/raspberrypi.svg"
+        }
+        ,
+        {
+            "name": "rclone",
+            "keywords": [],
+            "path": "assets/rclone.svg"
+        }
+        ,
+        {
+            "name": "readarr",
+            "keywords": [],
+            "path": "assets/readarr.svg"
+        }
+        ,
+        {
+            "name": "reddit",
+            "keywords": [],
+            "path": "assets/reddit.svg"
+        }
+        ,
+        {
+            "name": "redhat",
+            "keywords": [],
+            "path": "assets/redhat.svg"
+        }
+        ,
+        {
+            "name": "redhatopenshift",
+            "keywords": [],
+            "path": "assets/redhatopenshift.svg"
+        }
+        ,
+        {
+            "name": "redis",
+            "keywords": [],
+            "path": "assets/redis.svg"
+        }
+        ,
+        {
+            "name": "reolink",
+            "keywords": [],
+            "path": "assets/reolink.svg"
+        }
+        ,
+        {
+            "name": "riscv",
+            "keywords": [],
+            "path": "assets/riscv.svg"
+        }
+        ,
+        {
+            "name": "rocketchat",
+            "keywords": [],
+            "path": "assets/rocketchat.svg"
+        }
+        ,
+        {
+            "name": "rockylinux",
+            "keywords": [],
+            "path": "assets/rockylinux.svg"
+        }
+        ,
+        {
+            "name": "romm",
+            "keywords": [],
+            "path": "assets/romm.svg"
+        }
+        ,
+        {
+            "name": "roundcube",
+            "keywords": [],
+            "path": "assets/roundcube.svg"
+        }
+        ,
+        {
+            "name": "ruby",
+            "keywords": [],
+            "path": "assets/ruby.svg"
+        }
+        ,
+        {
+            "name": "rust",
+            "keywords": [],
+            "path": "assets/rust-crab.svg"
+        }
+        ,
+        {
+            "name": "rust",
+            "keywords": [],
+            "path": "assets/rust.svg"
+        }
+        ,
+        {
+            "name": "sabnzbd",
+            "keywords": [],
+            "path": "assets/sabnzbd.svg"
+        }
+        ,
+        {
+            "name": "safari",
+            "keywords": [],
+            "path": "assets/safari.svg"
+        }
+        ,
+        {
+            "name": "scaleway",
+            "keywords": [],
+            "path": "assets/scaleway.svg"
+        }
+        ,
+        {
+            "name": "scrutiny",
+            "keywords": [],
+            "path": "assets/scrutiny-black.svg"
+        }
+        ,
+        {
+            "name": "scrutiny",
+            "keywords": [],
+            "path": "assets/scrutiny-white.svg"
+        }
+        ,
+        {
+            "name": "seafile",
+            "keywords": [],
+            "path": "assets/seafile.svg"
+        }
+        ,
+        {
+            "name": "seagate",
+            "keywords": [],
+            "path": "assets/seagate.svg"
+        }
+        ,
+        {
+            "name": "searx",
+            "keywords": [],
+            "path": "assets/searx.svg"
+        }
+        ,
+        {
+            "name": "searxng",
+            "keywords": [],
+            "path": "assets/searxng.svg"
+        }
+        ,
+        {
+            "name": "semaphore",
+            "keywords": [],
+            "path": "assets/semaphore.svg"
+        }
+        ,
+        {
+            "name": "semver",
+            "keywords": [],
+            "path": "assets/semver-dark.svg"
+        }
+        ,
+        {
+            "name": "semver",
+            "keywords": [],
+            "path": "assets/semver-light.svg"
+        }
+        ,
+        {
+            "name": "serverfault",
+            "keywords": [],
+            "path": "assets/serverfault.svg"
+        }
+        ,
+        {
+            "name": "shelly",
+            "keywords": [],
+            "path": "assets/shelly.svg"
+        }
+        ,
+        {
+            "name": "signal",
+            "keywords": [],
+            "path": "assets/signal.svg"
+        }
+        ,
+        {
+            "name": "slack",
+            "keywords": [],
+            "path": "assets/slack.svg"
+        }
+        ,
+        {
+            "name": "slskd",
+            "keywords": [],
+            "path": "assets/slskd.svg"
+        }
+        ,
+        {
+            "name": "smallstep",
+            "keywords": [],
+            "path": "assets/smallstep.svg"
+        }
+        ,
+        {
+            "name": "snapchat",
+            "keywords": [],
+            "path": "assets/snapchat.svg"
+        }
+        ,
+        {
+            "name": "softwareinthepublicinterest",
+            "keywords": [],
+            "path": "assets/softwareinthepublicinterest.svg"
+        }
+        ,
+        {
+            "name": "sogo",
+            "keywords": [],
+            "path": "assets/sogo.svg"
+        }
+        ,
+        {
+            "name": "sonarr",
+            "keywords": ["tv", "media", "automation", "downloads"],
+            "path": "assets/sonarr.svg"
+        }
+        ,
+        {
+            "name": "sourcehut",
+            "keywords": [],
+            "path": "assets/sourcehut-black.svg"
+        }
+        ,
+        {
+            "name": "sourcehut",
+            "keywords": [],
+            "path": "assets/sourcehut-white.svg"
+        }
+        ,
+        {
+            "name": "splunk",
+            "keywords": [],
+            "path": "assets/splunk.svg"
+        }
+        ,
+        {
+            "name": "spotify",
+            "keywords": [],
+            "path": "assets/spotify.svg"
+        }
+        ,
+        {
+            "name": "sqlite",
+            "keywords": [],
+            "path": "assets/sqlite.svg"
+        }
+        ,
+        {
+            "name": "stackexchange",
+            "keywords": [],
+            "path": "assets/stackexchange.svg"
+        }
+        ,
+        {
+            "name": "stackoverflow",
+            "keywords": [],
+            "path": "assets/stackoverflow.svg"
+        }
+        ,
+        {
+            "name": "stash",
+            "keywords": [],
+            "path": "assets/stash.svg"
+        }
+        ,
+        {
+            "name": "staticwebserver",
+            "keywords": [],
+            "path": "assets/staticwebserver-black.svg"
+        }
+        ,
+        {
+            "name": "staticwebserver",
+            "keywords": [],
+            "path": "assets/staticwebserver-white.svg"
+        }
+        ,
+        {
+            "name": "steam",
+            "keywords": [],
+            "path": "assets/steam.svg"
+        }
+        ,
+        {
+            "name": "steamdb",
+            "keywords": [],
+            "path": "assets/steamdb.svg"
+        }
+        ,
+        {
+            "name": "steamdeck",
+            "keywords": [],
+            "path": "assets/steamdeck.svg"
+        }
+        ,
+        {
+            "name": "stirlingpdf",
+            "keywords": [],
+            "path": "assets/stirlingpdf.svg"
+        }
+        ,
+        {
+            "name": "stringis",
+            "keywords": [],
+            "path": "assets/stringis.svg"
+        }
+        ,
+        {
+            "name": "supabase",
+            "keywords": [],
+            "path": "assets/supabase.svg"
+        }
+        ,
+        {
+            "name": "supermicro",
+            "keywords": [],
+            "path": "assets/supermicro.svg"
+        }
+        ,
+        {
+            "name": "superuser",
+            "keywords": [],
+            "path": "assets/superuser.svg"
+        }
+        ,
+        {
+            "name": "syncthing",
+            "keywords": [],
+            "path": "assets/syncthing.svg"
+        }
+        ,
+        {
+            "name": "synology",
+            "keywords": [],
+            "path": "assets/synology-black.svg"
+        }
+        ,
+        {
+            "name": "synology",
+            "keywords": [],
+            "path": "assets/synology-diskstationmanager.svg"
+        }
+        ,
+        {
+            "name": "synology",
+            "keywords": [],
+            "path": "assets/synology-two-color.svg"
+        }
+        ,
+        {
+            "name": "synology",
+            "keywords": [],
+            "path": "assets/synology-white.svg"
+        }
+        ,
+        {
+            "name": "system76",
+            "keywords": [],
+            "path": "assets/system76.svg"
+        }
+        ,
+        {
+            "name": "systemd",
+            "keywords": [],
+            "path": "assets/systemd.svg"
+        }
+        ,
+        {
+            "name": "taiga",
+            "keywords": [],
+            "path": "assets/taiga.svg"
+        }
+        ,
+        {
+            "name": "tailscale",
+            "keywords": [],
+            "path": "assets/tailscale.svg"
+        }
+        ,
+        {
+            "name": "tandoor",
+            "keywords": [],
+            "path": "assets/tandoor.svg"
+        }
+        ,
+        {
+            "name": "tasmota",
+            "keywords": [],
+            "path": "assets/tasmota.svg"
+        }
+        ,
+        {
+            "name": "tautulli",
+            "keywords": [],
+            "path": "assets/tautulli.svg"
+        }
+        ,
+        {
+            "name": "telegram",
+            "keywords": [],
+            "path": "assets/telegram.svg"
+        }
+        ,
+        {
+            "name": "tenable",
+            "keywords": [],
+            "path": "assets/tenable.svg"
+        }
+        ,
+        {
+            "name": "terraform",
+            "keywords": [],
+            "path": "assets/terraform.svg"
+        }
+        ,
+        {
+            "name": "teslamate",
+            "keywords": [],
+            "path": "assets/teslamate.svg"
+        }
+        ,
+        {
+            "name": "thelounge",
+            "keywords": [],
+            "path": "assets/thelounge-dark.svg"
+        }
+        ,
+        {
+            "name": "thelounge",
+            "keywords": [],
+            "path": "assets/thelounge-light.svg"
+        }
+        ,
+        {
+            "name": "tiktok",
+            "keywords": [],
+            "path": "assets/tiktok.svg"
+        }
+        ,
+        {
+            "name": "tinypilot",
+            "keywords": [],
+            "path": "assets/tinypilot.svg"
+        }
+        ,
+        {
+            "name": "tinytinyrss",
+            "keywords": [],
+            "path": "assets/tinytinyrss.svg"
+        }
+        ,
+        {
+            "name": "toml",
+            "keywords": [],
+            "path": "assets/toml.svg"
+        }
+        ,
+        {
+            "name": "torbrowser",
+            "keywords": [],
+            "path": "assets/torbrowser.svg"
+        }
+        ,
+        {
+            "name": "torproject",
+            "keywords": [],
+            "path": "assets/torproject.svg"
+        }
+        ,
+        {
+            "name": "tplink",
+            "keywords": [],
+            "path": "assets/tplink.svg"
+        }
+        ,
+        {
+            "name": "traefik",
+            "keywords": [],
+            "path": "assets/traefik-gopher.svg"
+        }
+        ,
+        {
+            "name": "traefik",
+            "keywords": [],
+            "path": "assets/traefik-proxy.svg"
+        }
+        ,
+        {
+            "name": "trakt",
+            "keywords": [],
+            "path": "assets/trakt.svg"
+        }
+        ,
+        {
+            "name": "transmission",
+            "keywords": ["torrent", "download", "peer-to-peer", "p2p"],
+            "path": "assets/transmission.svg"
+        }
+        ,
+        {
+            "name": "travisci",
+            "keywords": [],
+            "path": "assets/travisci.svg"
+        }
+        ,
+        {
+            "name": "trezor",
+            "keywords": [],
+            "path": "assets/trezor-black.svg"
+        }
+        ,
+        {
+            "name": "trezor",
+            "keywords": [],
+            "path": "assets/trezor-white.svg"
+        }
+        ,
+        {
+            "name": "trillium",
+            "keywords": [],
+            "path": "assets/trillium.svg"
+        }
+        ,
+        {
+            "name": "truenas",
+            "keywords": [],
+            "path": "assets/truenas-scale.svg"
+        }
+        ,
+        {
+            "name": "truenas",
+            "keywords": [],
+            "path": "assets/truenas.svg"
+        }
+        ,
+        {
+            "name": "tubesync",
+            "keywords": [],
+            "path": "assets/tubesync.svg"
+        }
+        ,
+        {
+            "name": "tvheadend",
+            "keywords": [],
+            "path": "assets/tvheadend.svg"
+        }
+        ,
+        {
+            "name": "twitch",
+            "keywords": [],
+            "path": "assets/twitch.svg"
+        }
+        ,
+        {
+            "name": "twitter",
+            "keywords": [],
+            "path": "assets/twitter.svg"
+        }
+        ,
+        {
+            "name": "ubiquiti",
+            "keywords": [],
+            "path": "assets/ubiquiti.svg"
+        }
+        ,
+        {
+            "name": "umami",
+            "keywords": [],
+            "path": "assets/umami.svg"
+        }
+        ,
+        {
+            "name": "unbound",
+            "keywords": [],
+            "path": "assets/unbound.svg"
+        }
+        ,
+        {
+            "name": "unraid",
+            "keywords": [],
+            "path": "assets/unraid.svg"
+        }
+        ,
+        {
+            "name": "uptimekuma",
+            "keywords": [],
+            "path": "assets/uptimekuma.svg"
+        }
+        ,
+        {
+            "name": "vagrant",
+            "keywords": [],
+            "path": "assets/vagrant.svg"
+        }
+        ,
+        {
+            "name": "valkey",
+            "keywords": [],
+            "path": "assets/valkey.svg"
+        }
+        ,
+        {
+            "name": "vault",
+            "keywords": [],
+            "path": "assets/vault.svg"
+        }
+        ,
+        {
+            "name": "vaultwarden",
+            "keywords": [],
+            "path": "assets/vaultwarden.svg"
+        }
+        ,
+        {
+            "name": "veeam",
+            "keywords": [],
+            "path": "assets/veeam.svg"
+        }
+        ,
+        {
+            "name": "vercel",
+            "keywords": [],
+            "path": "assets/vercel-black.svg"
+        }
+        ,
+        {
+            "name": "vercel",
+            "keywords": [],
+            "path": "assets/vercel-white.svg"
+        }
+        ,
+        {
+            "name": "victoriametrics",
+            "keywords": [],
+            "path": "assets/victoriametrics-black.svg"
+        }
+        ,
+        {
+            "name": "victoriametrics",
+            "keywords": [],
+            "path": "assets/victoriametrics-white.svg"
+        }
+        ,
+        {
+            "name": "vikunja",
+            "keywords": [],
+            "path": "assets/vikunja.svg"
+        }
+        ,
+        {
+            "name": "vim",
+            "keywords": [],
+            "path": "assets/vim.svg"
+        }
+        ,
+        {
+            "name": "visualstudiocode",
+            "keywords": [],
+            "path": "assets/visualstudiocode.svg"
+        }
+        ,
+        {
+            "name": "vlc",
+            "keywords": [],
+            "path": "assets/vlc.svg"
+        }
+        ,
+        {
+            "name": "vmware",
+            "keywords": [],
+            "path": "assets/vmware.svg"
+        }
+        ,
+        {
+            "name": "vulkan",
+            "keywords": [],
+            "path": "assets/vulkan.svg"
+        }
+        ,
+        {
+            "name": "vultr",
+            "keywords": [],
+            "path": "assets/vultr-blue.svg"
+        }
+        ,
+        {
+            "name": "vultr",
+            "keywords": [],
+            "path": "assets/vultr-white.svg"
+        }
+        ,
+        {
+            "name": "vyos",
+            "keywords": [],
+            "path": "assets/vyos.svg"
+        }
+        ,
+        {
+            "name": "watchtower",
+            "keywords": [],
+            "path": "assets/watchtower.svg"
+        }
+        ,
+        {
+            "name": "waypoint",
+            "keywords": [],
+            "path": "assets/waypoint.svg"
+        }
+        ,
+        {
+            "name": "wazuh",
+            "keywords": [],
+            "path": "assets/wazuh-wide.svg"
+        }
+        ,
+        {
+            "name": "wazuh",
+            "keywords": [],
+            "path": "assets/wazuh.svg"
+        }
+        ,
+        {
+            "name": "weaveworks",
+            "keywords": [],
+            "path": "assets/weaveworks.svg"
+        }
+        ,
+        {
+            "name": "webgpu",
+            "keywords": [],
+            "path": "assets/webgpu.svg"
+        }
+        ,
+        {
+            "name": "wekan",
+            "keywords": [],
+            "path": "assets/wekan.svg"
+        }
+        ,
+        {
+            "name": "westerndigital",
+            "keywords": [],
+            "path": "assets/westerndigital.svg"
+        }
+        ,
+        {
+            "name": "whatsapp",
+            "keywords": [],
+            "path": "assets/whatsapp.svg"
+        }
+        ,
+        {
+            "name": "whisparr",
+            "keywords": [],
+            "path": "assets/whisparr.svg"
+        }
+        ,
+        {
+            "name": "wikijs",
+            "keywords": [],
+            "path": "assets/wikijs.svg"
+        }
+        ,
+        {
+            "name": "wikipedia",
+            "keywords": [],
+            "path": "assets/wikipedia.svg"
+        }
+        ,
+        {
+            "name": "windows10",
+            "keywords": [],
+            "path": "assets/windows10.svg"
+        }
+        ,
+        {
+            "name": "windows11",
+            "keywords": [],
+            "path": "assets/windows11.svg"
+        }
+        ,
+        {
+            "name": "windows8",
+            "keywords": [],
+            "path": "assets/windows8.svg"
+        }
+        ,
+        {
+            "name": "wireguard",
+            "keywords": [],
+            "path": "assets/wireguard.svg"
+        }
+        ,
+        {
+            "name": "wizarr",
+            "keywords": [],
+            "path": "assets/wizarr.svg"
+        }
+        ,
+        {
+            "name": "woodpeckerci",
+            "keywords": [],
+            "path": "assets/woodpeckerci-full.svg"
+        }
+        ,
+        {
+            "name": "woodpeckerci",
+            "keywords": [],
+            "path": "assets/woodpeckerci.svg"
+        }
+        ,
+        {
+            "name": "wordpress",
+            "keywords": [],
+            "path": "assets/wordpress.svg"
+        }
+        ,
+        {
+            "name": "x",
+            "keywords": [],
+            "path": "assets/x-black.svg"
+        }
+        ,
+        {
+            "name": "x",
+            "keywords": [],
+            "path": "assets/x-white.svg"
+        }
+        ,
+        {
+            "name": "xcpng",
+            "keywords": [],
+            "path": "assets/xcpng.svg"
+        }
+        ,
+        {
+            "name": "xfce",
+            "keywords": [],
+            "path": "assets/xfce.svg"
+        }
+        ,
+        {
+            "name": "xml",
+            "keywords": [],
+            "path": "assets/xml.svg"
+        }
+        ,
+        {
+            "name": "yacht",
+            "keywords": [],
+            "path": "assets/yacht.svg"
+        }
+        ,
+        {
+            "name": "yaml",
+            "keywords": [],
+            "path": "assets/yaml.svg"
+        }
+        ,
+        {
+            "name": "yarn",
+            "keywords": [],
+            "path": "assets/yarn.svg"
+        }
+        ,
+        {
+            "name": "ycombinator",
+            "keywords": [],
+            "path": "assets/ycombinator.svg"
+        }
+        ,
+        {
+            "name": "youtube",
+            "keywords": [],
+            "path": "assets/youtube.svg"
+        }
+        ,
+        {
+            "name": "zabbix",
+            "keywords": [],
+            "path": "assets/zabbix-wide.svg"
+        }
+        ,
+        {
+            "name": "zabbix",
+            "keywords": [],
+            "path": "assets/zabbix.svg"
+        }
+        ,
+        {
+            "name": "zerossl",
+            "keywords": [],
+            "path": "assets/zerossl.svg"
+        }
+        ,
+        {
+            "name": "zerotier",
+            "keywords": [],
+            "path": "assets/zerotier.svg"
+        }
+        ,
+        {
+            "name": "zigbee",
+            "keywords": [],
+            "path": "assets/zigbee.svg"
+        }
+        ,
+        {
+            "name": "zoneminder",
+            "keywords": [],
+            "path": "assets/zoneminder.svg"
+        }
+        ,
+        {
+            "name": "zshell",
+            "keywords": [],
+            "path": "assets/zshell.svg"
+        }
+        ,
+        {
+            "name": "zwave",
+            "keywords": [],
+            "path": "assets/zwave.svg"
+        }
+    ]
+}

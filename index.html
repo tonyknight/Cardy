@@ -95,6 +95,7 @@
                flex-direction: column;
                align-items: center;
                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+               position: relative;
           }
 
           .card:hover {
@@ -446,6 +447,353 @@
                color: #0f172a;
                font-weight: 600;
           }
+
+          .icon-search-results {
+               position: absolute;
+               top: calc(100% + 4px);
+               left: 0;
+               right: 0;
+               background: white;
+               border: 1px solid #e2e8f0;
+               border-radius: 6px;
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+               max-height: 200px;
+               overflow-y: auto;
+               display: none;
+               z-index: 1000;
+          }
+
+          .icon-search-result {
+               display: flex;
+               align-items: center;
+               padding: 0.75rem;
+               cursor: pointer;
+               gap: 0.75rem;
+               border-bottom: 1px solid #f1f5f9;
+          }
+
+          .icon-search-result:last-child {
+               border-bottom: none;
+          }
+
+          .icon-search-result:hover {
+               background: #f8fafc;
+          }
+
+          .icon-preview-small {
+               width: 24px;
+               height: 24px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }
+
+          .icon-preview {
+               margin-top: 0.5rem;
+               height: 60px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               background: #f8fafc;
+               border-radius: 6px;
+               border: 1px dashed #e2e8f0;
+          }
+
+          .icon-preview img, .icon-preview svg {
+               width: 48px;
+               height: 48px;
+               object-fit: contain;
+          }
+
+          .icon-search-result span {
+               flex: 1;
+               font-size: 0.875rem;
+               color: #334155;
+          }
+
+          .icon-search-result {
+               display: flex;
+               align-items: center;
+               padding: 0.75rem;
+               cursor: pointer;
+               gap: 0.75rem;
+               border-bottom: 1px solid #f1f5f9;
+          }
+
+          .icon-preview-small {
+               width: 24px;
+               height: 24px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }
+
+          .icon-preview-small svg {
+               width: 100%;
+               height: 100%;
+          }
+
+          .card-icon {
+               width: 48px;
+               height: 48px;
+               margin: 0 auto 1rem auto;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+          }
+
+          .card-icon svg {
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
+          }
+
+          .card-icon img {
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
+          }
+
+          /* Update card styles */
+          .card {
+               background: #ffffff;
+               border: 1px solid rgba(0, 0, 0, 0.05);
+               border-radius: 8px;
+               padding: 1.25rem;
+               text-align: center;
+               transition: all 0.2s ease;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+          }
+
+          .card:hover {
+               transform: translateY(-2px);
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+          }
+
+          .card-content {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               text-decoration: none;
+               color: inherit;
+               flex: 1;
+               width: 100%;
+          }
+
+          .card-icon {
+               width: 96px;  /* Doubled from 48px */
+               height: 96px; /* Doubled from 48px */
+               margin: 0 auto;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               transition: transform 0.2s ease;
+          }
+
+          .card-icon:hover {
+               transform: scale(1.05);
+          }
+
+          .card-icon svg {
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
+          }
+
+          .card-icon img {
+               width: 100%;
+               height: 100%;
+               object-fit: contain;
+          }
+
+          /* Only show title if there's no icon */
+          .card:has(.card-icon) .card-title {
+               display: none;
+          }
+
+          /* Only show link button if there's no icon */
+          .card:has(.card-icon) .card-link {
+               display: none;
+          }
+
+          /* Add dark mode styles */
+          :root {
+               --bg-color: #ffffff;
+               --text-color: #0f172a;
+               --card-bg: #ffffff;
+               --border-color: rgba(0, 0, 0, 0.05);
+               --dropdown-bg: #ffffff;
+               --dropdown-hover: #f8fafc;
+               --dropdown-icon-color: #64748b;  /* Default dropdown icon color */
+          }
+
+          .dark-mode {
+               --bg-color: #202023;
+               --text-color: #ffffff;
+               --card-bg: #2d2d30;
+               --border-color: rgba(255, 255, 255, 0.1);
+               --dropdown-bg: #2d2d30;
+               --dropdown-hover: #3d3d40;
+               --dropdown-icon-color: #e98d3c;  /* Orange color for dark mode dropdowns */
+          }
+
+          body {
+               background-color: var(--bg-color);
+               color: var(--text-color);
+               transition: background-color 0.3s ease, color 0.3s ease;
+          }
+
+          .card {
+               background-color: var(--card-bg);
+               border-color: var(--border-color);
+          }
+
+          /* Header dropdown styles */
+          .header-dropdown {
+               position: relative;
+               display: inline-block;
+          }
+
+          .header-dropdown-toggle {
+               background: transparent;
+               border: none;
+               color: #1e88e5;
+               cursor: pointer;
+               padding: 0.5rem;
+               border-radius: 4px;
+               display: flex;
+               align-items: center;
+               transition: transform 0.2s ease;
+          }
+
+          .header-dropdown-toggle:hover {
+               transform: translateY(2px);
+          }
+
+          .header-dropdown-menu {
+               position: absolute;
+               right: 0;
+               top: 100%;
+               background: var(--dropdown-bg);
+               border: 1px solid var(--border-color);
+               border-radius: 6px;
+               box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+               display: none;
+               z-index: 100;
+               min-width: 160px;
+          }
+
+          .header-dropdown-menu.show {
+               display: block;
+          }
+
+          .header-dropdown-item {
+               display: block;
+               padding: 0.75rem 1rem;
+               color: var(--text-color);
+               text-decoration: none;
+               cursor: pointer;
+               width: 100%;
+               text-align: left;
+               border: none;
+               background: none;
+               font-size: 0.875rem;
+               transition: background-color 0.2s ease;
+          }
+
+          .header-dropdown-item:hover {
+               background-color: var(--dropdown-hover);
+          }
+
+          /* Update existing styles for dark mode */
+          .section {
+               background-color: var(--card-bg);
+               border-color: var(--border-color);
+          }
+
+          .dropdown-menu {
+               background-color: var(--dropdown-bg);
+               border-color: var(--border-color);
+          }
+
+          .dropdown-item {
+               color: var(--text-color);
+          }
+
+          .dropdown-item:hover {
+               background-color: var(--dropdown-hover);
+          }
+
+          /* Update text colors for dark mode */
+          .dark-mode #dashboard-title,
+          .dark-mode .section h2,
+          .dark-mode .card-title {
+               color: var(--text-color);
+          }
+
+          /* Update dropdown styles */
+          .dropdown-toggle {
+               color: var(--dropdown-icon-color);
+          }
+
+          .header-dropdown-toggle {
+               color: var(--dropdown-icon-color);
+          }
+
+          /* Update welcome screen for dark mode */
+          .dark-mode .welcome-screen h1 {
+               color: var(--text-color);
+          }
+
+          .dark-mode .welcome-screen p {
+               color: #a1a1aa;  /* Lighter gray for dark mode secondary text */
+          }
+
+          /* Update form labels for dark mode */
+          .dark-mode .form-field label {
+               color: var(--text-color);
+          }
+
+          /* Update section headers for dark mode */
+          .dark-mode .section-header h2 {
+               color: var(--text-color);
+          }
+
+          /* Update dropdown menu items for dark mode */
+          .dark-mode .dropdown-item,
+          .dark-mode .header-dropdown-item {
+               color: var(--text-color);
+          }
+
+          /* Keep the delete option red even in dark mode */
+          .dark-mode .dropdown-item.delete {
+               color: #ef4444;
+          }
+
+          /* Update card styles to position dropdown */
+          .card {
+               position: relative;
+          }
+
+          .card .dropdown {
+               position: absolute;
+               top: 8px;
+               left: 8px;
+               z-index: 10;
+          }
+
+          /* Make dropdown more visible on hover */
+          .card .dropdown-toggle {
+               opacity: 0.5;
+               transition: opacity 0.2s ease;
+          }
+
+          .card:hover .dropdown-toggle {
+               opacity: 1;
+          }
      </style>
      <script type="application/json" id="dashboard-data">
           {
@@ -490,12 +838,35 @@
         }
 
         // Load data function
-        function loadData() {
+        async function loadData() {
             try {
-                // First try to load from embedded JSON
+                // First try to load from cardy.json
+                try {
+                    console.log('Attempting to load from cardy.json...');
+                    const response = await fetch('cardy.json');
+                    if (response.ok) {
+                        const data = await response.json();
+                        console.log('Successfully loaded from cardy.json:', data);
+                        
+                        if (data.sections.length > 0 || data.title) {
+                            sections = data.sections;
+                            document.getElementById('welcome-screen').style.display = 'none';
+                            document.getElementById('dashboard-container').style.display = 'block';
+                            document.getElementById('dashboard-title').textContent = data.title;
+                            document.getElementById('add-section-form').style.display = 'flex';
+                            setupAddSectionForm();
+                            return true;
+                        }
+                    }
+                } catch (e) {
+                    console.log('No cardy.json found or error loading it:', e);
+                }
+
+                // If no cardy.json, try embedded JSON
                 const dataScript = document.getElementById('dashboard-data');
                 const embeddedData = JSON.parse(dataScript.textContent);
                 if (embeddedData.sections.length > 0 || embeddedData.title) {
+                    console.log('Loading from embedded JSON data');
                     sections = embeddedData.sections;
                     document.getElementById('welcome-screen').style.display = 'none';
                     document.getElementById('dashboard-container').style.display = 'block';
@@ -505,28 +876,15 @@
                     return true;
                 }
 
-                // If embedded data is empty, try loading from cardy.json
-                fetch('cardy.json')
-                    .then(response => response.json())
-                    .then(data => {
-                        sections = data.sections;
-                        if (sections.length > 0 || data.title) {
-                            document.getElementById('welcome-screen').style.display = 'none';
-                            document.getElementById('dashboard-container').style.display = 'block';
-                            document.getElementById('dashboard-title').textContent = data.title;
-                            document.getElementById('add-section-form').style.display = 'flex';
-                            setupAddSectionForm();
-                            renderDashboard();
-                        }
-                    })
-                    .catch(() => {
-                        // If neither source has data, we're in template mode
-                        sections = [];
-                    });
+                // If no data found anywhere, we're in template mode
+                console.log('No existing data found, starting in template mode');
+                return false;
+
             } catch (e) {
+                console.error('Error loading data:', e);
                 sections = [];
+                return false;
             }
-            return false;
         }
 
         // Save data function
@@ -563,14 +921,82 @@
 
         // Make header editable function
         function makeHeaderEditable() {
-            const header = document.getElementById('dashboard-title');
-            header.style.cursor = 'pointer';
-            header.onclick = () => {
-                const newTitle = prompt('Enter new dashboard title:', header.textContent);
-                if (newTitle && newTitle.trim()) {
-                    header.textContent = newTitle.trim();
+            const headerContainer = document.querySelector('.header-container');
+            headerContainer.style.display = 'flex';
+            headerContainer.style.flexDirection = 'row';
+            headerContainer.style.alignItems = 'center';
+            headerContainer.style.justifyContent = 'center';
+            headerContainer.style.gap = '20px';
+
+            const titleDropdown = createHeaderDropdownMenu([
+                {
+                    label: 'Edit Title',
+                    action: () => {
+                        const newTitle = prompt('Enter new dashboard title:', document.getElementById('dashboard-title').textContent);
+                        if (newTitle && newTitle.trim()) {
+                            document.getElementById('dashboard-title').textContent = newTitle.trim();
+                        }
+                    }
+                },
+                {
+                    label: 'Toggle Dark Mode',
+                    action: toggleDarkMode
+                },
+                {
+                    label: 'Save Dashboard',
+                    action: saveData
                 }
+            ]);
+
+            headerContainer.appendChild(titleDropdown);
+        }
+
+        // Add the header dropdown menu creation function
+        function createHeaderDropdownMenu(items) {
+            const dropdown = document.createElement('div');
+            dropdown.className = 'header-dropdown';
+
+            const toggleButton = document.createElement('button');
+            toggleButton.className = 'header-dropdown-toggle';
+            toggleButton.innerHTML = `
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            `;
+
+            const menu = document.createElement('div');
+            menu.className = 'header-dropdown-menu';
+
+            items.forEach(item => {
+                const button = document.createElement('button');
+                button.className = 'header-dropdown-item';
+                button.textContent = item.label;
+                button.onclick = (e) => {
+                    e.stopPropagation();
+                    menu.classList.remove('show');
+                    item.action();
+                };
+                menu.appendChild(button);
+            });
+
+            toggleButton.onclick = (e) => {
+                e.stopPropagation();
+                menu.classList.toggle('show');
             };
+
+            document.addEventListener('click', () => {
+                menu.classList.remove('show');
+            });
+
+            dropdown.appendChild(toggleButton);
+            dropdown.appendChild(menu);
+            return dropdown;
+        }
+
+        // Add dark mode toggle functionality
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
         }
 
         // Initialize dashboard functionality
@@ -660,12 +1086,28 @@
                 addCardForm.style.display = 'none';
                 addCardForm.innerHTML = `
                     <div class="card new-card">
-                        <input type="text" class="card-input" name="title" placeholder="Card Title" required>
-                        <input type="text" class="card-input" name="link" placeholder="Service URL or IP Address" required>
-                        <div class="icon-selector">
-                            <input type="text" class="card-input" name="iconSearch" placeholder="Search for icon...">
-                            <div class="icon-preview"></div>
+                        <div class="form-field">
+                            <label for="card-title-${section.id}">Service Name</label>
+                            <input type="text" class="card-input" name="title" id="card-title-${section.id}" required>
                         </div>
+                        
+                        <div class="form-field">
+                            <label for="card-link-${section.id}">Service URL</label>
+                            <input type="text" class="card-input" name="link" id="card-link-${section.id}" 
+                                   placeholder="http://, https://, or IP address" required>
+                        </div>
+                        
+                        <div class="form-field">
+                            <label for="card-icon-${section.id}">Service Icon</label>
+                            <div class="icon-selector">
+                                <input type="text" class="card-input" name="iconSearch" id="card-icon-${section.id}"
+                                       placeholder="Start typing to search icons or enter URL..." 
+                                       autocomplete="off">
+                                <div class="icon-search-results"></div>
+                                <div class="icon-preview"></div>
+                            </div>
+                        </div>
+                        
                         <div class="form-buttons">
                             <button type="submit" class="submit-card-btn">Add</button>
                             <button type="button" class="cancel-card-btn">Cancel</button>
@@ -680,7 +1122,7 @@
                     const cardData = {
                         title: formData.get('title'),
                         link: formData.get('link'),
-                        icon: '' // We'll add icon selection later
+                        icon: selectedIcon
                     };
 
                     if (cardData.title && cardData.link) {
@@ -689,6 +1131,9 @@
                         addCardForm.reset();
                     }
                 });
+
+                // Add this line here
+                setupIconSearch(addCardForm);
 
                 // Handle cancel button
                 addCardForm.querySelector('.cancel-card-btn').addEventListener('click', () => {
@@ -797,44 +1242,78 @@
             });
         }
 
-        // Load data or initialize new dashboard
-        document.addEventListener('DOMContentLoaded', () => {
-            if (!loadData()) {
+        // Load icon index immediately
+        async function loadIconIndex() {
+            try {
+                console.log('Attempting to load icon index...');
+                const response = await fetch('assets/icon-index.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log('Successfully loaded icon index:', data);
+                iconIndex = data.icons;
+            } catch (error) {
+                console.error('Error loading icon index:', error);
+            }
+        }
+
+        // Call this when the page loads
+        document.addEventListener('DOMContentLoaded', async () => {
+            // Check for saved dark mode preference
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            await loadIconIndex();
+            const hasExistingData = await loadData();
+            if (!hasExistingData) {
                 initializeDashboard();
             } else {
                 makeHeaderEditable();
-                addSaveButton();
                 renderDashboard();
             }
         });
 
-        // Add the createCardElement function that was missing
+        // Update the createCardElement function
         function createCardElement(card, sectionId) {
             const cardDiv = document.createElement('div');
             cardDiv.className = 'card';
 
+            // Create clickable container for icon and title
+            const clickableContainer = document.createElement('a');
+            clickableContainer.href = card.link.startsWith('http') ? card.link : `http://${card.link}`;
+            clickableContainer.target = '_blank';
+            clickableContainer.rel = 'noopener noreferrer';
+            clickableContainer.className = 'card-content';
+
             // Add icon if provided
             if (card.icon) {
-                const iconImg = document.createElement('img');
-                iconImg.src = card.icon;
-                iconImg.alt = card.title;
-                cardDiv.appendChild(iconImg);
+                const iconContainer = document.createElement('div');
+                iconContainer.className = 'card-icon';
+                if (card.icon.type === 'url') {
+                    iconContainer.innerHTML = `<img src="${card.icon.value}" alt="${card.title}">`;
+                } else if (card.icon.type === 'svg') {
+                    iconContainer.innerHTML = card.icon.value;
+                }
+                clickableContainer.appendChild(iconContainer);
+            } else {
+                // If no icon, show title and link button
+                const titleEl = document.createElement('div');
+                titleEl.className = 'card-title';
+                titleEl.textContent = card.title;
+                clickableContainer.appendChild(titleEl);
+
+                const linkEl = document.createElement('a');
+                linkEl.className = 'card-link';
+                linkEl.href = card.link.startsWith('http') ? card.link : `http://${card.link}`;
+                linkEl.target = '_blank';
+                linkEl.rel = 'noopener noreferrer';
+                linkEl.textContent = 'Open';
+                cardDiv.appendChild(linkEl);
             }
 
-            // Add title
-            const titleEl = document.createElement('div');
-            titleEl.className = 'card-title';
-            titleEl.textContent = card.title;
-            cardDiv.appendChild(titleEl);
-
-            // Add link
-            const linkEl = document.createElement('a');
-            linkEl.className = 'card-link';
-            linkEl.href = card.link.startsWith('http') ? card.link : `http://${card.link}`;
-            linkEl.target = '_blank';
-            linkEl.rel = 'noopener noreferrer';
-            linkEl.textContent = 'Open';
-            cardDiv.appendChild(linkEl);
+            cardDiv.appendChild(clickableContainer);
 
             // Add dropdown menu
             const cardDropdown = createDropdownMenu([
@@ -870,14 +1349,13 @@
             const section = sections.find(s => s.id === sectionId);
             if (!section) return;
 
-            // Add http:// if the link doesn't start with http:// or https://
             const formattedLink = link.match(/^https?:\/\//) ? link : `http://${link}`;
 
             const newCard = {
                 id: generateId(),
                 title: title,
                 link: formattedLink,
-                icon: icon
+                icon: selectedIcon ? selectedIcon : null
             };
 
             section.cards.push(newCard);
@@ -903,6 +1381,164 @@
             
             Object.assign(card, updates);
             renderDashboard();
+        }
+
+        // Add icon search functionality
+        let iconIndex = null;
+        let selectedIcon = null;
+
+        // Load icon index immediately
+        async function loadIconIndex() {
+            try {
+                console.log('Attempting to load icon index...');
+                const response = await fetch('assets/icon-index.json');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                console.log('Successfully loaded icon index:', data);
+                iconIndex = data.icons;
+            } catch (error) {
+                console.error('Error loading icon index:', error);
+            }
+        }
+
+        function setupIconSearch(addCardForm) {
+            const iconSearchInput = addCardForm.querySelector('[name="iconSearch"]');
+            const searchResults = addCardForm.querySelector('.icon-search-results');
+            const iconPreview = addCardForm.querySelector('.icon-preview');
+            
+            console.log('Icon Search Setup:', {
+                form: addCardForm,
+                input: iconSearchInput,
+                results: searchResults,
+                preview: iconPreview
+            });
+
+            let debounceTimeout;
+
+            iconSearchInput.addEventListener('input', (e) => {
+                const value = e.target.value.trim().toLowerCase();
+                console.log('Input Event:', {
+                    rawValue: e.target.value,
+                    trimmedValue: value,
+                    iconIndexExists: !!iconIndex,
+                    iconIndexLength: iconIndex ? iconIndex.length : 0
+                });
+                
+                // Clear previous timeout
+                if (debounceTimeout) {
+                    clearTimeout(debounceTimeout);
+                }
+                
+                // Clear previous results
+                searchResults.innerHTML = '';
+                
+                // Handle URL input
+                if (value.startsWith('http')) {
+                    console.log('URL detected, showing preview');
+                    selectedIcon = { type: 'url', value: value };
+                    iconPreview.innerHTML = `
+                        <img src="${value}" 
+                             alt="Icon preview"
+                             onerror="this.style.display='none'"
+                             onload="this.style.display='block'">
+                    `;
+                    searchResults.style.display = 'none';
+                    return;
+                }
+
+                // Debounce search
+                debounceTimeout = setTimeout(() => {
+                    console.log('Debounced Search:', {
+                        searchValue: value,
+                        valueLength: value.length,
+                        iconIndex: iconIndex
+                    });
+
+                    // Handle icon search
+                    if (value.length < 2 || !iconIndex) {
+                        console.log('Search skipped:', {
+                            reason: value.length < 2 ? 'Too short' : 'No icon index',
+                            valueLength: value.length,
+                            hasIconIndex: !!iconIndex
+                        });
+                        searchResults.style.display = 'none';
+                        return;
+                    }
+
+                    // Search icons
+                    const matches = iconIndex.filter(icon => {
+                        const nameMatch = icon.name.includes(value);
+                        const keywordMatch = icon.keywords.some(k => k.includes(value));
+                        console.log('Checking icon:', {
+                            iconName: icon.name,
+                            searchValue: value,
+                            nameMatch: nameMatch,
+                            keywordMatch: keywordMatch,
+                            keywords: icon.keywords
+                        });
+                        return nameMatch || keywordMatch;
+                    });
+
+                    console.log('Search Results:', {
+                        searchValue: value,
+                        matchCount: matches.length,
+                        matches: matches
+                    });
+
+                    if (matches.length > 0) {
+                        searchResults.style.display = 'block';
+                        matches.slice(0, 5).forEach(async icon => {
+                            try {
+                                console.log('Attempting to load SVG:', icon.path);
+                                // Try with and without the 'assets/' prefix
+                                let svgContent;
+                                try {
+                                    const response = await fetch(icon.path);
+                                    if (!response.ok) {
+                                        throw new Error('Failed with assets/ prefix');
+                                    }
+                                    svgContent = await response.text();
+                                } catch (e) {
+                                    console.log('Trying without assets/ prefix...');
+                                    const response = await fetch(icon.path.replace('assets/', ''));
+                                    svgContent = await response.text();
+                                }
+                                
+                                console.log('Successfully loaded SVG content');
+                                
+                                const resultDiv = document.createElement('div');
+                                resultDiv.className = 'icon-search-result';
+                                resultDiv.innerHTML = `
+                                    <div class="icon-preview-small">
+                                        ${svgContent}
+                                    </div>
+                                    <span>${icon.name}</span>
+                                `;
+                                
+                                resultDiv.addEventListener('click', () => {
+                                    console.log('Icon selected:', icon.name);
+                                    selectedIcon = { type: 'svg', value: svgContent };
+                                    iconPreview.innerHTML = svgContent;
+                                    iconSearchInput.value = icon.name;
+                                    searchResults.style.display = 'none';
+                                });
+                                
+                                searchResults.appendChild(resultDiv);
+                            } catch (error) {
+                                console.error('Error loading SVG:', {
+                                    path: icon.path,
+                                    error: error.message
+                                });
+                            }
+                        });
+                    } else {
+                        console.log('No matches found');
+                        searchResults.style.display = 'none';
+                    }
+                }, 300);
+            });
         }
     </script>
 </body>
