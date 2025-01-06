@@ -457,6 +457,12 @@
         }
         ,
         {
+            "name": "casaos",
+            "keywords": [],
+            "path": "assets/casaos.svg"
+        }
+        ,
+        {
             "name": "centos",
             "keywords": [],
             "path": "assets/centos.svg"
@@ -1042,6 +1048,12 @@
             "name": "gitlab",
             "keywords": [],
             "path": "assets/gitlab.svg"
+        }
+        ,
+        {
+            "name": "glances",
+            "keywords": [],
+            "path": "assets/glances.svg"
         }
         ,
         {

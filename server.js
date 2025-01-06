@@ -1,54 +1,55 @@
 const express = require('express');
-const fs = require('fs');
 const path = require('path');
+const { exec } = require('child_process');
+const fs = require('fs');
 const app = express();
+const port = 3000;
 
-app.use(express.json());
+// Serve static files from the current directory
+app.use(express.static(__dirname));
 
-// Serve the HTML file with embedded data
-app.get('/', (req, res) => {
-    fs.readFile('index.html', 'utf8', (err, html) => {
-        if (err) {
-            res.status(500).send('Error reading file');
-            return;
+// Add specific route for icon-index.json
+app.get('/assets/icon-index.json', (req, res) => {
+    const filePath = path.join(__dirname, 'assets', 'icon-index.json');
+    try {
+        if (fs.existsSync(filePath)) {
+            res.sendFile(filePath);
+        } else {
+            res.status(404).send('Icon index not found');
         }
-        
-        // Read the current dashboard data
-        let dashboardData = [];
-        try {
-            dashboardData = JSON.parse(fs.readFileSync('dashboard-data.json', 'utf8'));
-        } catch (e) {
-            // If file doesn't exist or is invalid, use empty array
+    } catch(err) {
+        res.status(500).send('Error reading icon index');
+    }
+});
+
+// Add specific route for cardy.json
+app.get('/cardy.json', (req, res) => {
+    const filePath = path.join(__dirname, 'cardy.json');
+    try {
+        if (fs.existsSync(filePath)) {
+            res.sendFile(filePath);
+        } else {
+            res.status(404).send('No saved dashboard found');
         }
-        
-        // Inject the data into the HTML
-        const modifiedHtml = html.replace(
-            'window.initialDashboardData = [];',
-            `window.initialDashboardData = ${JSON.stringify(dashboardData)};`
-        );
-        
-        res.send(modifiedHtml);
+    } catch(err) {
+        res.status(500).send('Error reading dashboard data');
+    }
+});
+
+// Start the server
+const server = app.listen(port, () => {
+    console.log(`Cardy server running at http://localhost:${port}`);
+    
+    // Open the default browser
+    const url = `http://localhost:${port}`;
+    const start = (process.platform == 'darwin' ? 'open' : process.platform == 'win32' ? 'start' : 'xdg-open');
+    exec(`${start} ${url}`);
+});
+
+// Handle server shutdown
+process.on('SIGINT', () => {
+    server.close(() => {
+        console.log('Cardy server stopped');
+        process.exit(0);
     });
-});
-
-// Save endpoint
-app.post('/save-dashboard', (req, res) => {
-    const dashboardData = req.body;
-    
-    // Save the data to a JSON file
-    fs.writeFileSync('dashboard-data.json', JSON.stringify(dashboardData, null, 2));
-    
-    // Update the HTML file
-    let html = fs.readFileSync('index.html', 'utf8');
-    html = html.replace(
-        /window\.initialDashboardData = \[.*?\];/s,
-        `window.initialDashboardData = ${JSON.stringify(dashboardData)};`
-    );
-    fs.writeFileSync('index.html', html);
-    
-    res.json({ success: true });
-});
-
-app.listen(3000, () => {
-    console.log('Server running on port 3000');
 }); 

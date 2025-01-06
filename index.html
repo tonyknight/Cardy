@@ -3,7 +3,7 @@
 
 <head>
      <meta charset="UTF-8" />
-     <title>Tailscale Servers Dashboard</title>
+     <title>Cardy:Self-Contained Dashboard</title>
      <style>
           /* Basic reset and some styling */
           * {
@@ -79,7 +79,7 @@
           /* Cards container - 5 cards per row using a CSS grid */
           .cards-container {
                display: grid;
-               grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+               grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
                gap: 1rem;
           }
 
@@ -584,8 +584,8 @@
           }
 
           .card-icon {
-               width: 96px;  /* Doubled from 48px */
-               height: 96px; /* Doubled from 48px */
+               width: 60px;  /* Size of each card */
+               height: 60px; 
                margin: 0 auto;
                display: flex;
                align-items: center;
@@ -833,8 +833,29 @@
         let sections = [];
 
         // Utility to create unique IDs
-        function generateId() {
-            return "_" + Math.random().toString(36).substr(2, 9);
+        function getNextSectionId() {
+            if (sections.length === 0) return "section_1";
+            
+            // Find the highest section number
+            const maxSection = sections.reduce((max, section) => {
+                const sectionNum = parseInt(section.id.split('_')[1]);
+                return Math.max(max, sectionNum);
+            }, 0);
+            
+            return `section_${maxSection + 1}`;
+        }
+
+        function getNextCardId(sectionId) {
+            const section = sections.find(s => s.id === sectionId);
+            if (!section || !section.cards) return `card_${sectionId.split('_')[1]}_1`;
+            
+            // Find the highest card number in this section
+            const maxCard = section.cards.reduce((max, card) => {
+                const cardNum = parseInt(card.id.split('_')[3]);
+                return Math.max(max, cardNum);
+            }, 0);
+            
+            return `card_${sectionId.split('_')[1]}_${maxCard + 1}`;
         }
 
         // Load data function
@@ -1219,24 +1240,18 @@
             const sectionNameInput = document.getElementById('sectionName');
 
             addSectionForm.addEventListener('submit', (e) => {
-                e.preventDefault(); // Prevent form submission from refreshing the page
+                e.preventDefault();
                 
                 const sectionName = sectionNameInput.value.trim();
                 if (sectionName) {
-                    // Create new section
                     const newSection = {
-                        id: generateId(),
+                        id: getNextSectionId(),
                         name: sectionName,
                         cards: []
                     };
                     
-                    // Add to sections array
                     sections.push(newSection);
-                    
-                    // Clear input
                     sectionNameInput.value = '';
-                    
-                    // Render dashboard
                     renderDashboard();
                 }
             });
@@ -1352,12 +1367,13 @@
             const formattedLink = link.match(/^https?:\/\//) ? link : `http://${link}`;
 
             const newCard = {
-                id: generateId(),
+                id: getNextCardId(sectionId),
                 title: title,
                 link: formattedLink,
                 icon: selectedIcon ? selectedIcon : null
             };
 
+            if (!section.cards) section.cards = [];
             section.cards.push(newCard);
             renderDashboard();
         }
